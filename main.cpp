@@ -4,7 +4,9 @@
 
 int main()
 {
-    double a, b, c, x1, x2;
+    double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
+
+    printf("%lf %lf %lf %lf %lf", a, b, c, x1, x2);
 
     while (1)
     {
