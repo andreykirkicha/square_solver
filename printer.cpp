@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include "squaresolver.h"
 
-void printer(int res, double *x1, double *x2, char *str)
+void printer(int res, double *x1, double *x2)
 {
     printf("ans: ");
-    if (res == 2)
+    if (res == TWO_ROOTS)
         printf("%lf, %lf\n", *x1, *x2);
-    else if (res == 1)
+    else if (res == ONE_ROOT)
         printf("%lf\n", *x1);
+    else if (res == INF_ROOTS)
+        printf("any number\n");
     else
-        printf("%s\n", str);
+        printf("nothing\n");
 }
