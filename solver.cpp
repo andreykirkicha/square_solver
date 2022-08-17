@@ -11,8 +11,10 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
 
         if (D > 0)
         {
-            *x1 = (-b + sqrt(D)) / (2 * a);
-            *x2 = (-b - sqrt(D)) / (2 * a);
+            double sqrtD = sqrt(D);
+
+            *x1 = (-b + sqrtD) / (2 * a);
+            *x2 = (-b - sqrtD) / (2 * a);
             return TWO_ROOTS;
         }
         else if (D == 0)
@@ -28,10 +30,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
 int linsolver(double b, double c, double *x1)
 {
     if (b == 0)
-        if (c == 0)
-            return INF_ROOTS;
-        else
-            return NO_ROOTS;
+        return (c == 0) ? INF_ROOTS : NO_ROOTS;
     else
     {
         *x1 = - c / b;

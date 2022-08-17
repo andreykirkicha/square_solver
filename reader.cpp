@@ -5,7 +5,8 @@ int reader(double *a)
     if (!scanf("%lf", a))
     {
         printf("<error> not a number\n");
-        fflush(stdin);
+        while (getchar() != '\n')
+            ;
         return -1;
     }
     return 0;
