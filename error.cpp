@@ -3,7 +3,7 @@
 #include <float.h>
 #include "squaresolver.h"
 
-void err(int n)
+void errorhunter(int n)
 {
     char s[ERRLEN] = {};
 
@@ -11,26 +11,26 @@ void err(int n)
     {
         case 0:
             return;
-        case -1:
+        case NOT_NUM:
         {
-            char ch;
+            char ch = '0';
             printf("<error> ");
             while ((ch = getchar()) != '\n')
                 putchar(ch);
             printf(" is not a number\n");
             return;
         }
-        case -2:
+        case PTR_NULL:
         {
             strcpy(s, "some pointer is NULL");
             break;
         }
-        case -3:
+        case TOO_BIG:
         {
             strcpy(s, "this number is too big");
             break;
         }
-        case -4:
+        case TOO_BIG_CALC:
         {
             strcpy(s, "overflow during calculation");
             break;
@@ -41,6 +41,7 @@ void err(int n)
             break;
         }
     }
+
     printf("<error> %s\n", s);
     return;
 }

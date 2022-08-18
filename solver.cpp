@@ -7,16 +7,17 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
 {
     if (x1 == NULL || x2 == NULL)
     {
-        errno = -2;
+        errno = PTR_NULL;
         return errno;
     }
+
     if (fabs(a) < EPS)
         return linsolver(b, c, x1);
     else
     {
         if (limits(b * b - 4 * a * c))
         {
-            errno = -4;
+            errno = TOO_BIG_CALC;
             return errno;
         }
 
@@ -28,7 +29,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
 
             if (limits((-b + sqrtD) / (2 * a)) || limits((-b - sqrtD) / (2 * a)))
             {
-                errno = -4;
+                errno = TOO_BIG_CALC;
                 return errno;
             }
 
@@ -40,7 +41,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
         {
             if (limits((-b) / (2 * a)))
             {
-                errno = -4;
+                errno = TOO_BIG_CALC;
                 return errno;
             }
 
@@ -56,7 +57,7 @@ int linsolver(double b, double c, double *x1)
 {
     if (x1 == NULL)
     {
-        errno = -2;
+        errno = PTR_NULL;
         return errno;
     }
 
@@ -66,7 +67,7 @@ int linsolver(double b, double c, double *x1)
     {
         if (limits(- c / b))
         {
-            errno = -4;
+            errno = TOO_BIG_CALC;
             return errno;
         }
 
