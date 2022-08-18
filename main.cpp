@@ -15,7 +15,7 @@ int main()
 
         double x1 = 0, x2 = 0, res = 0;
         res = squaresolver(a, b, c, &x1, &x2);
-        errorhunter(errno);
+        error_handler(errno);
 
         printer(res, x1, x2);
     }

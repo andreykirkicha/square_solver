@@ -11,7 +11,10 @@ int reader(double *a)
     else if (!scanf("%lf", a))
         errno = NOT_NUM;
 
-    else if (limits(*a))
+    else if (!finite(*a))
+        errno = INF_NAN;
+
+    else if (not_in_range(*a))
         errno = TOO_BIG;
 
     return errno;
@@ -22,21 +25,21 @@ int input_coefficient(double *a, double *b, double *c)
     printf("a = ");
     if (reader(a) != 0)
     {
-        errorhunter(errno);
+        error_handler(errno);
         return -1;
     }
 
     printf("b = ");
     if (reader(b) != 0)
     {
-        errorhunter(errno);
+        error_handler(errno);
         return -1;
     }
 
     printf("c = ");
     if (reader(c) != 0)
     {
-        errorhunter(errno);
+        error_handler(errno);
         return -1;
     }
 
@@ -55,7 +58,7 @@ void printer(int res, double x1, double x2)
 
     else if (res == ONE_ROOT)
     {
-        if (fabs(x1) < EPS)
+        if (cmp_double(x1, 0, EPS))
             x1 = 0;
         printf("%lf\n", x1);
     }

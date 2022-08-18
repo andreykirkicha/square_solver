@@ -3,52 +3,57 @@
 #include <float.h>
 #include "squaresolver.h"
 
-void errorhunter(int n)
+void error_handler(int error)
 {
-    char s[ERRLEN] = {};
+    char message[ERRLEN] = {};
 
-    switch(n)
+    switch(error)
     {
         case 0:
             return;
         case NOT_NUM:
         {
-            char ch = '0';
+            char sym = '0';
             printf("<error> ");
-            while ((ch = getchar()) != '\n')
-                putchar(ch);
+            while ((sym = getchar()) != '\n')
+                putchar(sym);
             printf(" is not a number\n");
             return;
         }
         case PTR_NULL:
         {
-            strcpy(s, "some pointer is NULL");
+            strcpy(message, "some pointer is NULL");
             break;
         }
         case TOO_BIG:
         {
-            strcpy(s, "this number is too big");
+            strcpy(message, "this number is too big");
             break;
         }
         case TOO_BIG_CALC:
         {
-            strcpy(s, "overflow during calculation");
+            strcpy(message, "overflow during calculation");
+            break;
+        }
+        case INF_NAN:
+        {
+            strcpy(message, "inappropriate value");
             break;
         }
         default:
         {
-            strcpy(s, "unknown error");
+            strcpy(message, "unknown error");
             break;
         }
     }
 
-    printf("<error> %s\n", s);
+    printf("<error> %s\n", message);
     return;
 }
 
-int limits(double n)
+int not_in_range(double num)
 {
-    if (n < -DBL_MAX || n > DBL_MAX)
+    if (num < -DBL_MAX || num > DBL_MAX)
         return 1;
     return 0;
 }

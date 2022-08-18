@@ -11,11 +11,11 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
         return errno;
     }
 
-    if (fabs(a) < EPS)
+    if (cmp_double(a, 0, EPS))
         return linsolver(b, c, x1);
     else
     {
-        if (limits(b * b - 4 * a * c))
+        if (not_in_range(b * b - 4 * a * c))
         {
             errno = TOO_BIG_CALC;
             return errno;
@@ -27,7 +27,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
         {
             double sqrtD = sqrt(D);
 
-            if (limits((-b + sqrtD) / (2 * a)) || limits((-b - sqrtD) / (2 * a)))
+            if (not_in_range((-b + sqrtD) / (2 * a)) || not_in_range((-b - sqrtD) / (2 * a)))
             {
                 errno = TOO_BIG_CALC;
                 return errno;
@@ -37,9 +37,9 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
             *x2 = (-b - sqrtD) / (2 * a);
             return TWO_ROOTS;
         }
-        else if (fabs(D) < EPS)
+        else if (cmp_double(D, 0, EPS))
         {
-            if (limits((-b) / (2 * a)))
+            if (not_in_range((-b) / (2 * a)))
             {
                 errno = TOO_BIG_CALC;
                 return errno;
@@ -61,11 +61,11 @@ int linsolver(double b, double c, double *x1)
         return errno;
     }
 
-    if (fabs(b) < EPS)
-        return (fabs(c) < EPS) ? INF_ROOTS : NO_ROOTS;
+    if (cmp_double(b, 0, EPS))
+        return (cmp_double(c, 0, EPS)) ? INF_ROOTS : NO_ROOTS;
     else
     {
-        if (limits(- c / b))
+        if (not_in_range(- c / b))
         {
             errno = TOO_BIG_CALC;
             return errno;
@@ -74,4 +74,11 @@ int linsolver(double b, double c, double *x1)
         *x1 = - c / b;
         return ONE_ROOT;
     }
+}
+
+int cmp_double(double a, double b, double lim)
+{
+    if (fabs(a - b) < lim)
+        return 1;
+    return 0;
 }
