@@ -8,7 +8,7 @@ int reader(double *a)
     if (a == NULL)
         errno = PTR_NULL;
 
-    if (!scanf("%lf", a) || !finite(*a))
+    else if (!scanf("%lf", a) || !finite(*a))
     {
         errno = INC_INP;
         return errno;
