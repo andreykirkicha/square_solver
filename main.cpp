@@ -13,8 +13,8 @@ int main()
         if (input_coefficient(&a, &b, &c) == -1)
             continue;
 
-        double x1 = 0, x2 = 0, res = 0;
-        res = squaresolver(a, b, c, &x1, &x2);
+        double x1 = 0, x2 = 0;
+        double res = squaresolver(a, b, c, &x1, &x2);
         error_handler(errno);
 
         printer(res, x1, x2);

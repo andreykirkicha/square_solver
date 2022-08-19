@@ -8,25 +8,15 @@ int reader(double *a)
     if (a == NULL)
         errno = PTR_NULL;
 
-    if (!scanf("%lf", a))
+    if (!scanf("%lf", a) || !finite(*a))
     {
-        errno = NOT_NUM;
+        errno = INC_INP;
         return errno;
     }
 
-    char sym = getchar();
-    if (sym != '\n')
-    {
-        while ((sym = getchar()) != '\n')
-            ;
-        errno = TOO_MANY;
-    }
-
-    if (!finite(*a))
-        errno = INF_NAN;
-
-    else if (not_in_range(*a))
-        errno = TOO_BIG;
+    char tail = getchar();
+    if (tail != '\n')
+        errno = INC_INP;
 
     return errno;
 }
@@ -58,24 +48,31 @@ int input_coefficient(double *a, double *b, double *c)
 
 void printer(int res, double x1, double x2)
 {
-    if (res < 0)
-        return;
-
-    printf("ans: ");
-
-    if (res == TWO_ROOTS)
-        printf("%lf, %lf\n", x1, x2);
-
-    else if (res == ONE_ROOT)
+    switch(res)
     {
-        if (cmp_double(x1, 0, EPS))
-            x1 = 0;
-        printf("%lf\n", x1);
+        case TWO_ROOTS:
+        {
+            printf("%lf, %lf\n", x1, x2);
+            break;
+        }
+        case ONE_ROOT:
+        {
+            if (is_equal(x1, 0, EPS))
+                x1 = 0;
+            printf("%lf\n", x1);
+            break;
+        }
+        case INF_ROOTS:
+        {
+            printf("any number\n");
+            break;
+        }
+        case NO_ROOTS:
+        {
+            printf("nothing\n");
+            break;
+        }
+        default:
+            return;
     }
-
-    else if (res == INF_ROOTS)
-        printf("any number\n");
-
-    else
-        printf("nothing\n");
 }

@@ -10,39 +10,21 @@ void error_handler(int error)
     switch(error)
     {
         case 0:
+        {
+            printf("ans: ");
             return;
-        case NOT_NUM:
+        }
+        case INC_INP:
         {
             char sym = '0';
-            printf("<error> ");
             while ((sym = getchar()) != '\n')
-                putchar(sym);
-            printf(" is not a number\n");
-            return;
+                ;
+            strcat(message, "incorrect input");
+            break;
         }
         case PTR_NULL:
         {
             strcpy(message, "some pointer is NULL");
-            break;
-        }
-        case TOO_BIG:
-        {
-            strcpy(message, "this number is too big");
-            break;
-        }
-        case TOO_BIG_CALC:
-        {
-            strcpy(message, "overflow during calculation");
-            break;
-        }
-        case INF_NAN:
-        {
-            strcpy(message, "inappropriate value");
-            break;
-        }
-        case TOO_MANY:
-        {
-            strcpy(message, "too many arguments");
             break;
         }
         default:
@@ -54,11 +36,4 @@ void error_handler(int error)
 
     printf("<error> %s\n", message);
     return;
-}
-
-int not_in_range(double num)
-{
-    if (num < -DBL_MAX || num > DBL_MAX)
-        return 1;
-    return 0;
 }
