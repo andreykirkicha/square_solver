@@ -1,17 +1,20 @@
 #include <errno.h>
 
-enum roots {
+enum roots
+{
     INF_ROOTS = 0,
     ONE_ROOT = 1,
     TWO_ROOTS = 2,
     NO_ROOTS = 3
 };
-enum errors {
+enum errors
+{
     NOT_NUM = -1,
     PTR_NULL = -2,
     TOO_BIG = -3,
     TOO_BIG_CALC = -4,
-    INF_NAN = -5
+    INF_NAN = -5,
+    TOO_MANY = -6
 };
 const double EPS = 0.000002;
 const int ERRLEN = 28;

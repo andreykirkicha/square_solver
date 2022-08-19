@@ -8,10 +8,21 @@ int reader(double *a)
     if (a == NULL)
         errno = PTR_NULL;
 
-    else if (!scanf("%lf", a))
+    if (!scanf("%lf", a))
+    {
         errno = NOT_NUM;
+        return errno;
+    }
 
-    else if (!finite(*a))
+    char sym = getchar();
+    if (sym != '\n')
+    {
+        while ((sym = getchar()) != '\n')
+            ;
+        errno = TOO_MANY;
+    }
+
+    if (!finite(*a))
         errno = INF_NAN;
 
     else if (not_in_range(*a))
@@ -42,7 +53,6 @@ int input_coefficient(double *a, double *b, double *c)
         error_handler(errno);
         return -1;
     }
-
     return 0;
 }
 

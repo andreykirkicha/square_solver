@@ -40,6 +40,11 @@ void error_handler(int error)
             strcpy(message, "inappropriate value");
             break;
         }
+        case TOO_MANY:
+        {
+            strcpy(message, "too many arguments");
+            break;
+        }
         default:
         {
             strcpy(message, "unknown error");
