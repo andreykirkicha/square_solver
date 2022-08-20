@@ -23,7 +23,7 @@ void error_handler(int error)
             printf("incorrect input\n");
             break;
         }
-        case PTR_NULL:
+        case PTR_NUL:
         {
             printf("some pointer is NULL\n");
             break;

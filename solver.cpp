@@ -7,7 +7,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
 {
     if (x1 == NULL || x2 == NULL)
     {
-        errno = PTR_NULL;
+        errno = PTR_NUL;
         return errno;
     }
 
@@ -39,7 +39,7 @@ int linsolver(double b, double c, double *x1)
 {
     if (x1 == NULL)
     {
-        errno = PTR_NULL;
+        errno = PTR_NUL;
         return errno;
     }
 

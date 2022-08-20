@@ -1,14 +1,44 @@
 #include <stdio.h>
 #include <conio.h>
 #include "squaresolver.h"
+#include "test.hpp"
+
+struct IN in_str[AMOUNT] = {
+    0, 0, 0,
+    0, 1, 0,
+    0, 0, 1,
+    1, 2, 3,
+    4999, 219, 78,
+    -98, 6, 54,
+    19, 27, 45,
+    10, -25, 30,
+    1, 9, 9,
+    8, 8, 7
+};
+
+struct OUT out_str[AMOUNT] = {
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0
+};
 
 int main()
 {
     while (1)
     {
+        printf("<test>\n\n");
+        test(in_str, out_str, AMOUNT);
+
         printf("press 'q' to quit or other key to start\n");
-        char end_continue = _getch();
-        if (end_continue == 'q')
+        char end_start = _getch();
+        if (end_start == 'q')
             break;
 
         errno = 0;

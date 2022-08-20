@@ -7,7 +7,7 @@ int reader(double *a)
 {
     if (a == NULL)
     {
-        errno = PTR_NULL;
+        errno = PTR_NUL;
         return errno;
     }
 

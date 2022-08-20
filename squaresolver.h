@@ -7,9 +7,9 @@ enum roots {
     NO_ROOTS    = 3
 };
 enum errors {
-    OK = 0,
-    INC_INP  = -1,
-    PTR_NULL = -2
+    OK      = 0,
+    INC_INP = -1,
+    PTR_NUL = -2
 };
 const double EPS = 0.000002;
 const int ERRLEN = 28;
