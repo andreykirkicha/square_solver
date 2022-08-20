@@ -5,35 +5,35 @@
 
 void error_handler(int error)
 {
-    char message[ERRLEN] = {};
+    if (error == OK)
+    {
+        printf("ans: ");
+        return;
+    }
+
+    printf("error: ");
 
     switch(error)
     {
-        case 0:
-        {
-            printf("ans: ");
-            return;
-        }
         case INC_INP:
         {
             char sym = '0';
             while ((sym = getchar()) != '\n')
                 ;
-            strcat(message, "incorrect input");
+            printf("incorrect input\n");
             break;
         }
         case PTR_NULL:
         {
-            strcpy(message, "some pointer is NULL");
+            printf("some pointer is NULL\n");
             break;
         }
         default:
         {
-            strcpy(message, "unknown error");
+            printf("unknown error\n");
             break;
         }
     }
-
-    printf("<error> %s\n", message);
+    printf("\n");
     return;
 }

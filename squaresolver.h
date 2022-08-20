@@ -7,6 +7,7 @@ enum roots {
     NO_ROOTS    = 3
 };
 enum errors {
+    OK = 0,
     INC_INP  = -1,
     PTR_NULL = -2
 };

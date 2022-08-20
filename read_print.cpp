@@ -6,7 +6,10 @@
 int reader(double *a)
 {
     if (a == NULL)
+    {
         errno = PTR_NULL;
+        return errno;
+    }
 
     else if (!scanf("%lf", a) || !finite(*a))
     {

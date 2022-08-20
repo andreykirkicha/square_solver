@@ -1,12 +1,18 @@
 #include <stdio.h>
+#include <conio.h>
 #include "squaresolver.h"
 
 int main()
 {
     while (1)
     {
+        printf("press 'q' to quit or other key to start\n");
+        char end_continue = _getch();
+        if (end_continue == 'q')
+            break;
+
         errno = 0;
-        printf("-----------------------------\n");
+        printf("---------------------------------------\n");
         printf("equation: a*x^2 + b*x + c = 0\n");
 
         double a = 0, b = 0, c = 0;
@@ -18,6 +24,7 @@ int main()
         error_handler(errno);
 
         printer(res, x1, x2);
+        printf("\n");
     }
     return 0;
 }
