@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <float.h>
-#include "squaresolver.h"
+#include "squaresolver.hpp"
 
 void error_handler(int error)
 {

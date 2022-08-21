@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <float.h>
 #include <math.h>
-#include "squaresolver.h"
+#include "squaresolver.hpp"
 
 int reader(double *a)
 {

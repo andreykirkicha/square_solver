@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <float.h>
-#include "squaresolver.h"
+#include "squaresolver.hpp"
 
 int squaresolver(double a, double b, double c, double *x1, double *x2)
 {

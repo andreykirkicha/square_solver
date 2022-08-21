@@ -21,3 +21,4 @@ int linsolver(double b, double c, double *x1);
 void printer(int res, double x1, double x2);
 void error_handler(int error);
 int is_equal(double a, double b, double lim);
+
