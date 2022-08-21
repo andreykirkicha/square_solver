@@ -21,8 +21,8 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
         {
             double sqrtD = sqrt(D);
 
-            *x1 = (-b + sqrtD) / (2 * a);
-            *x2 = (-b - sqrtD) / (2 * a);
+            *x1 = (-b - sqrtD) / (2 * a);
+            *x2 = (-b + sqrtD) / (2 * a);
             return TWO_ROOTS;
         }
         else if (is_equal(D, 0, EPS))

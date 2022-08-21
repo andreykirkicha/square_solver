@@ -4,48 +4,51 @@
 #include "test.hpp"
 
 struct IN in_str[AMOUNT] = {
-    0, 0, 0,
-    0, 1, 0,
-    0, 0, 1,
-    1, -2, 1,
-    4999, 219, 78,
-    -98, 6, 54,
-    19, 27, 45,
-    10, -25, 30,
-    1, 9, 9,
-    3, 8, -7
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL
 };
 
 struct ANS ans_str[AMOUNT] = {
-    -27, -27, "any number",
-    0, -27, "one root",
-    -27, -27, "nothing",
-    1, -27, "one root",
-    -27, -27, "nothing",
-    -0.712326, 0.773551, "two roots",
-    -27, -27, "nothing",
-    -27, -27, "nothing",
-    -7.854102, -1.145900, "two roots",
-    -3.360920, 0.694254, "two roots"
+    START_VAL, START_VAL, "any number",
+    START_VAL, START_VAL, "nothing",
+    0, START_VAL, "one root",
+    -0.8, 0, "two roots",
+    START_VAL, START_VAL, "incorrect input",
+    START_VAL, START_VAL, "incorrect input",
+    START_VAL, START_VAL, "incorrect input",
+    START_VAL, START_VAL, "incorrect input",
+    -1.538284, 0.420637, "two roots",
+    -9.361823, 10.782875, "two roots"
 };
 
 struct OUT out_str[AMOUNT] = {
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27,
-    -27, -27, -27
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL,
+    START_VAL, START_VAL, START_VAL
 };
 
 int main()
 {
+    errno = OK;
+    FILE *f = fopen("test.txt", "r");
+
     printf("<test>\n\n");
-    test(in_str, out_str, ans_str, AMOUNT);
+    test(in_str, out_str, ans_str, AMOUNT, errno, f);
 
     while (1)
     {
@@ -54,7 +57,7 @@ int main()
         if (end_start == 'q')
             break;
 
-        errno = 0;
+        errno = OK;
         printf("---------------------------------------\n");
         printf("equation: a*x^2 + b*x + c = 0\n");
 

@@ -1,5 +1,6 @@
 const int AMOUNT = 10;
-const int ANS_LEN = 11;
+const int ANS_LEN = 16;
+const int START_VAL = -27;
 
 struct IN {
     double a;
@@ -19,4 +20,4 @@ struct ANS {
     char ans[ANS_LEN];
 };
 
-void test(struct IN[], struct OUT[], struct ANS[], int);
+void test(struct IN[], struct OUT[], struct ANS[], int, int, FILE *);
