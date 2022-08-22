@@ -19,10 +19,8 @@ void test(double a, double b, double c, double test_x1, double test_x2, char tes
         int res = errno;
 
         printf("\tinput:\n\tincorrect input\n\n"
-            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
-            "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
-            res, x1, x2,
-            test_res, test_x1, test_x2);
+            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
+            res, x1, x2);
     }
     else
     {
