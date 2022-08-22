@@ -4,30 +4,24 @@
 #include "test.hpp"
 
 struct TEST_DATA data[AMOUNT] = {
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "any number",
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "nothing",
-    START_VAL, START_VAL, START_VAL, 0, START_VAL, "one root",
-    START_VAL, START_VAL, START_VAL, -0.8, 0, "two roots",
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "incorrect input",
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "incorrect input",
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "incorrect input",
-    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "incorrect input",
-    START_VAL, START_VAL, START_VAL, -1.538284, 0.420637, "two roots",
-    START_VAL, START_VAL, START_VAL, -9.361823, 10.782875, "two roots"
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, "",
+    START_VAL, START_VAL, START_VAL, START_VAL, START_VAL, ""
 };
 
 int main()
 {
     errno = OK;
     FILE *f = fopen("test.txt", "r");
-    int i = 0;
 
-    printf("<test>\n\n");
-    for ( ; i < AMOUNT; i++)
-    {
-        test_reader(&data[i], f);
-        test(data[i].a, data[i].b, data[i].c, data[i].x1, data[i].x2, data[i].res, i, f);
-    }
+    test(&data, AMOUNT, f);
 
     while (1)
     {

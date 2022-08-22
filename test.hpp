@@ -11,5 +11,5 @@ struct TEST_DATA {
     char res[ANS_LEN];
 };
 
-void test(double a, double b, double c, double test_x1, double test_x2, char test_res[], int num, FILE *f);
+void test(struct TEST_DATA *test[], int amount, FILE *f);
 void test_reader(struct TEST_DATA *test, FILE *f);
