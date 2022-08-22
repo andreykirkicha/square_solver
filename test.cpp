@@ -3,7 +3,7 @@
 #include "test.hpp"
 #include "squaresolver.hpp"
 
-void test(struct TEST_DATA *test[], int amount, FILE *f)
+void test(struct TEST_DATA (*test)[AMOUNT], int amount, FILE *f)
 {
     double x1 = START_VAL, x2 = START_VAL;
     int i = 0;
