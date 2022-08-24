@@ -25,6 +25,11 @@ void error_handler( int error )
             printf("some pointer is NULL\n");
             break;
         }
+        case CNT_OP:
+        {
+            printf("can't open the test file\n");
+            break;
+        }
         default:
         {
             printf("unknown error\n");

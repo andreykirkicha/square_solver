@@ -5,26 +5,36 @@
 
 struct TEST_DATA data[AMOUNT] = {};
 
-int main()
+int main(int argc, char *argv[])
 {
-    errno = OK;
-    FILE *f = fopen("test.txt", "r");
-    int i = 0;
-
-    printf("<test_begin>\n\n");
-    for ( ; i < AMOUNT; i++)
-        test(&data[i], i, f);
-    printf("<test_end>\n\n");
-
     while (1)
     {
-        printf("press 'q' to quit or other key to start\n");
+        printf("press 'q' to quit, 't' to begin test or other key to start solving\n");
         char end_start = _getch();
         if (end_start == 'q')
             break;
 
         errno = OK;
-        printf("---------------------------------------\n");
+
+        if (end_start == 't')
+        {
+            FILE *f = fopen(argv[1], "r");
+            if (f == NULL)
+            {
+                errno = CNT_OP;
+                error_handler(errno);
+                continue;
+            }
+            int i = 0;
+
+            printf("\n<test_begin>\n\n");
+            for ( ; i < AMOUNT; i++)
+                test(&data[i], i, f);
+            printf("<test_end>\n\n");
+            continue;
+        }
+
+        printf("------------------------------------------------------------------\n");
         printf("equation: a*x^2 + b*x + c = 0\n");
 
         double a = 0, b = 0, c = 0;

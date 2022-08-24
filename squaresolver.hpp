@@ -14,7 +14,8 @@ enum roots {
 enum errors {
     OK      =  0, ///< no errors
     INC_INP = -1, ///< incorrect input
-    PTR_NUL = -2  ///< some pointer has got value NULL
+    PTR_NUL = -2, ///< some pointer has got value NULL
+    CNT_OP  = -3  ///< can't open the file
 };
 const double EPS = 0.000002; ///< Accuracy that is used to compare double values.
 

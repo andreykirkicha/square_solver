@@ -17,7 +17,7 @@ void test( struct TEST_DATA *test, int num, FILE *f )
         clear_buf(f);
         int res = errno;
         printf("\tinput:\n\tincorrect input\n\n"
-            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
+            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n",
             res, x1, x2);
     }
     else
@@ -25,7 +25,7 @@ void test( struct TEST_DATA *test, int num, FILE *f )
         int res = squaresolver(test->a, test->b, test->c, &x1, &x2);
         printf("\tinput:\n\ta:\t%lf\n\tb:\t%lf\n\tc:\t%lf\n\n"
             "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
-            "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
+            "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n",
             test->a, test->b, test->c,
             res, x1, x2,
             test->res, test->x1, test->x2);
