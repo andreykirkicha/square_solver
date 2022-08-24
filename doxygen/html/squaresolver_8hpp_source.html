@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>squaresolver: Исходный файл squaresolver.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">squaresolver
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">squaresolver.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="squaresolver_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3c">    5</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3c">roots</a> {</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36">    6</a></span>&#160;    <a class="code" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a>   = 0, </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf">    7</a></span>&#160;    <a class="code" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>    = 1, </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81">    8</a></span>&#160;    <a class="code" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>   = 2, </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>    = 3  </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c">   10</a></span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971">   14</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971">errors</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59">   15</a></span>&#160;    <a class="code" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a>      =  0, </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9">   16</a></span>&#160;    <a class="code" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9">INC_INP</a> = -1, </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e">PTR_NUL</a> = -2  </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e">   18</a></span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">   19</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 0.000002; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="squaresolver_8hpp.html#a12066ce39c36c348d2488991da53aa07">reader</a>( <span class="keywordtype">double</span> *a );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">int</span> <a class="code" href="squaresolver_8hpp.html#a1b43884abaed70b952f06787f9fad483">input_coefficient</a>( <span class="keywordtype">double</span> *a, <span class="keywordtype">double</span> *b, <span class="keywordtype">double</span> *c );</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">int</span> <a class="code" href="squaresolver_8hpp.html#a575ca4ad5af18425ca7b32b4cb247b18">squaresolver</a>( <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> c, <span class="keywordtype">double</span> *x1, <span class="keywordtype">double</span> *x2 );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="squaresolver_8hpp.html#a3dea016aaca6fd0c5af3aa02898a6f76">linsolver</a>( <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> c, <span class="keywordtype">double</span> *x1 );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="squaresolver_8hpp.html#a9431972a03e6bc15f5145a1fedf44233">printer</a>( <span class="keywordtype">int</span> res, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2 );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="squaresolver_8hpp.html#a84593bfc4ab0fe98740bd394180983a4">error_handler</a>( <span class="keywordtype">int</span> error );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">int</span> <a class="code" href="squaresolver_8hpp.html#a59407076ee6342ec18d2de0c0b5ebda9">is_equal</a>( <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> lim );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="squaresolver_8hpp.html#a0e09d60122404af814db0135c6a8ab8d">clear_buf</a>( FILE *f );</div>
+<div class="ttc" id="asquaresolver_8hpp_html_a0e09d60122404af814db0135c6a8ab8d"><div class="ttname"><a href="squaresolver_8hpp.html#a0e09d60122404af814db0135c6a8ab8d">clear_buf</a></div><div class="ttdeci">void clear_buf(FILE *f)</div><div class="ttdef"><b>Definition:</b> read_print.cpp:86</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a12066ce39c36c348d2488991da53aa07"><div class="ttname"><a href="squaresolver_8hpp.html#a12066ce39c36c348d2488991da53aa07">reader</a></div><div class="ttdeci">int reader(double *a)</div><div class="ttdef"><b>Definition:</b> read_print.cpp:5</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a1b43884abaed70b952f06787f9fad483"><div class="ttname"><a href="squaresolver_8hpp.html#a1b43884abaed70b952f06787f9fad483">input_coefficient</a></div><div class="ttdeci">int input_coefficient(double *a, double *b, double *c)</div><div class="ttdef"><b>Definition:</b> read_print.cpp:26</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a3dea016aaca6fd0c5af3aa02898a6f76"><div class="ttname"><a href="squaresolver_8hpp.html#a3dea016aaca6fd0c5af3aa02898a6f76">linsolver</a></div><div class="ttdeci">int linsolver(double b, double c, double *x1)</div><div class="ttdef"><b>Definition:</b> solver.cpp:42</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a575ca4ad5af18425ca7b32b4cb247b18"><div class="ttname"><a href="squaresolver_8hpp.html#a575ca4ad5af18425ca7b32b4cb247b18">squaresolver</a></div><div class="ttdeci">int squaresolver(double a, double b, double c, double *x1, double *x2)</div><div class="ttdef"><b>Definition:</b> solver.cpp:5</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a59407076ee6342ec18d2de0c0b5ebda9"><div class="ttname"><a href="squaresolver_8hpp.html#a59407076ee6342ec18d2de0c0b5ebda9">is_equal</a></div><div class="ttdeci">int is_equal(double a, double b, double lim)</div><div class="ttdef"><b>Definition:</b> solver.cpp:57</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a84593bfc4ab0fe98740bd394180983a4"><div class="ttname"><a href="squaresolver_8hpp.html#a84593bfc4ab0fe98740bd394180983a4">error_handler</a></div><div class="ttdeci">void error_handler(int error)</div><div class="ttdef"><b>Definition:</b> error.cpp:5</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_a9431972a03e6bc15f5145a1fedf44233"><div class="ttname"><a href="squaresolver_8hpp.html#a9431972a03e6bc15f5145a1fedf44233">printer</a></div><div class="ttdeci">void printer(int res, double x1, double x2)</div><div class="ttdef"><b>Definition:</b> read_print.cpp:51</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_ac6a66a418b6646df5aa3c82d9fb39d3c"><div class="ttname"><a href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3c">roots</a></div><div class="ttdeci">roots</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:5</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36"><div class="ttname"><a href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a></div><div class="ttdeci">@ INF_ROOTS</div><div class="ttdoc">equation has got infinite number of roots</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:6</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf"><div class="ttname"><a href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a></div><div class="ttdeci">@ ONE_ROOT</div><div class="ttdoc">equation has got one root</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:7</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81"><div class="ttname"><a href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a></div><div class="ttdeci">@ TWO_ROOTS</div><div class="ttdoc">equation has got two roots</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:8</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c"><div class="ttname"><a href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c">NO_ROOTS</a></div><div class="ttdeci">@ NO_ROOTS</div><div class="ttdoc">equation hasn't got any roots</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:9</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_acc42076253600be964e110149b458971"><div class="ttname"><a href="squaresolver_8hpp.html#acc42076253600be964e110149b458971">errors</a></div><div class="ttdeci">errors</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:14</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59"><div class="ttname"><a href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">no errors</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:15</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e"><div class="ttname"><a href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e">PTR_NUL</a></div><div class="ttdeci">@ PTR_NUL</div><div class="ttdoc">some pointer has got value NULL</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:17</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9"><div class="ttname"><a href="squaresolver_8hpp.html#acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9">INC_INP</a></div><div class="ttdeci">@ INC_INP</div><div class="ttdoc">incorrect input</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:16</div></div>
+<div class="ttc" id="asquaresolver_8hpp_html_afe01386a82fedc016455a43c20280a97"><div class="ttname"><a href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a></div><div class="ttdeci">const double EPS</div><div class="ttdoc">Accuracy that is used to compare double values.</div><div class="ttdef"><b>Definition:</b> squaresolver.hpp:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по squaresolver. Последние изменения: Ср 24 Авг 2022 20:08:06. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

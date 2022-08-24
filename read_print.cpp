@@ -82,3 +82,10 @@ void printer( int res, double x1, double x2 )
     }
     return;
 }
+
+void clear_buf( FILE *f )
+{
+    char sym = '0';
+    while ((sym = getc(f)) != '\n')
+        ;
+}

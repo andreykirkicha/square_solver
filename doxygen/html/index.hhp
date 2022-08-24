@@ -1,0 +1,76 @@
+[OPTIONS]
+Compiled file=../squaresolver.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x419 Russian
+Title=squaresolver
+
+[WINDOWS]
+main="squaresolver","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+annotated.html
+classes.html
+error_8cpp.html
+files.html
+functions.html
+functions_vars.html
+globals.html
+globals_enum.html
+globals_eval.html
+globals_func.html
+globals_vars.html
+graph_legend.html
+index.html
+main_8cpp.html
+read__print_8cpp.html
+solver_8cpp.html
+squaresolver_8hpp.html
+squaresolver_8hpp_source.html
+struct_t_e_s_t___d_a_t_a-members.html
+struct_t_e_s_t___d_a_t_a.html
+test_8cpp.html
+test_8hpp.html
+test_8hpp_source.html
+bc_s.png
+bdwn.png
+closed.png
+error_8cpp__incl.png
+error_8cpp_a84593bfc4ab0fe98740bd394180983a4_cgraph.png
+graph_legend.png
+main_8cpp__incl.png
+main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png
+nav_f.png
+nav_h.png
+open.png
+read__print_8cpp__incl.png
+read__print_8cpp_a1b43884abaed70b952f06787f9fad483_cgraph.png
+read__print_8cpp_a9431972a03e6bc15f5145a1fedf44233_cgraph.png
+solver_8cpp__incl.png
+solver_8cpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph.png
+solver_8cpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph.png
+squaresolver_8hpp__dep__incl.png
+squaresolver_8hpp__incl.png
+squaresolver_8hpp_a1b43884abaed70b952f06787f9fad483_cgraph.png
+squaresolver_8hpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph.png
+squaresolver_8hpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph.png
+squaresolver_8hpp_a84593bfc4ab0fe98740bd394180983a4_cgraph.png
+squaresolver_8hpp_a9431972a03e6bc15f5145a1fedf44233_cgraph.png
+sync_off.png
+sync_on.png
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+test_8cpp__incl.png
+test_8cpp_a418f96738b553d3dc5b627220b6b0d9b_cgraph.png
+test_8cpp_a84bfd49d6c75b95c4fa8b6950d95dfbc_cgraph.png
+test_8cpp_ae8089327ae47e0d94df7fa9cc065cf0e_cgraph.png
+test_8hpp__dep__incl.png
+test_8hpp_a418f96738b553d3dc5b627220b6b0d9b_cgraph.png
+test_8hpp_a84bfd49d6c75b95c4fa8b6950d95dfbc_cgraph.png
+test_8hpp_ae8089327ae47e0d94df7fa9cc065cf0e_cgraph.png

@@ -1,23 +1,21 @@
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "test.hpp"
 #include "squaresolver.hpp"
 
 void test( struct TEST_DATA *test, int num, FILE *f )
 {
     double x1 = START_VAL, x2 = START_VAL;
+    test_init(test);
     test_reader(test, f);
 
     printf("%d)", num + 1);
 
     if (errno == INC_INP)
     {
-        char sym = '0';
-        while ((sym = getc(f)) != '\n')
-            ;
-
+        clear_buf(f);
         int res = errno;
-
         printf("\tinput:\n\tincorrect input\n\n"
             "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
             res, x1, x2);
@@ -46,4 +44,14 @@ void test_reader( struct TEST_DATA *test, FILE *f )
     char tail = getc(f);
     if (tail != '\n')
         errno = INC_INP;
+}
+
+void test_init( struct TEST_DATA *test )
+{
+    test->a = START_VAL;
+    test->b = START_VAL;
+    test->c = START_VAL;
+    test->x1 = START_VAL;
+    test->x2 = START_VAL;
+    strcpy(test->res, "");
 }

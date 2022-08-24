@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>squaresolver: Файл read_print.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">squaresolver
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл read_print.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="squaresolver_8hpp_source.html">squaresolver.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для read_print.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="read__print_8cpp__incl.png" border="0" usemap="#aread__print_8cpp" alt=""/></div>
+<map name="aread__print_8cpp" id="aread__print_8cpp">
+<area shape="rect" href="squaresolver_8hpp.html" title=" " alt="" coords="175,81,297,108" />
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a12066ce39c36c348d2488991da53aa07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__print_8cpp.html#a12066ce39c36c348d2488991da53aa07">reader</a> (double *a)</td></tr>
+<tr class="separator:a12066ce39c36c348d2488991da53aa07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b43884abaed70b952f06787f9fad483"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__print_8cpp.html#a1b43884abaed70b952f06787f9fad483">input_coefficient</a> (double *a, double *b, double *c)</td></tr>
+<tr class="separator:a1b43884abaed70b952f06787f9fad483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9431972a03e6bc15f5145a1fedf44233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__print_8cpp.html#a9431972a03e6bc15f5145a1fedf44233">printer</a> (int res, double x1, double x2)</td></tr>
+<tr class="separator:a9431972a03e6bc15f5145a1fedf44233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e09d60122404af814db0135c6a8ab8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read__print_8cpp.html#a0e09d60122404af814db0135c6a8ab8d">clear_buf</a> (FILE *f)</td></tr>
+<tr class="separator:a0e09d60122404af814db0135c6a8ab8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a0e09d60122404af814db0135c6a8ab8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e09d60122404af814db0135c6a8ab8d">&#9670;&nbsp;</a></span>clear_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear_buf </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function clears buffer after incorrect input. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- input stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b43884abaed70b952f06787f9fad483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b43884abaed70b952f06787f9fad483">&#9670;&nbsp;</a></span>input_coefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int input_coefficient </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to get equation coefficients from stdin.\ Equation: a*x^2 + b*x + c = 0. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- variable that gets value of coefficient a </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- variable that gets value of coefficient b </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- variable that gets value of coefficient c </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 - it was successfully completed </dd>
+<dd>
+-1 - there's some errors </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read__print_8cpp_a1b43884abaed70b952f06787f9fad483_cgraph.png" border="0" usemap="#aread__print_8cpp_a1b43884abaed70b952f06787f9fad483_cgraph" alt=""/></div>
+<map name="aread__print_8cpp_a1b43884abaed70b952f06787f9fad483_cgraph" id="aread__print_8cpp_a1b43884abaed70b952f06787f9fad483_cgraph">
+<area shape="rect" href="error_8cpp.html#a84593bfc4ab0fe98740bd394180983a4" title=" " alt="" coords="172,7,273,34" />
+<area shape="rect" href="read__print_8cpp.html#a12066ce39c36c348d2488991da53aa07" title=" " alt="" coords="193,58,252,84" />
+<area shape="rect" href="read__print_8cpp.html#a0e09d60122404af814db0135c6a8ab8d" title=" " alt="" coords="323,7,397,34" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9431972a03e6bc15f5145a1fedf44233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9431972a03e6bc15f5145a1fedf44233">&#9670;&nbsp;</a></span>printer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function puts the result on a screen depending on return values. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>- result/error number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>- first root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>- second root of the equation (if exists) </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="read__print_8cpp_a9431972a03e6bc15f5145a1fedf44233_cgraph.png" border="0" usemap="#aread__print_8cpp_a9431972a03e6bc15f5145a1fedf44233_cgraph" alt=""/></div>
+<map name="aread__print_8cpp_a9431972a03e6bc15f5145a1fedf44233_cgraph" id="aread__print_8cpp_a9431972a03e6bc15f5145a1fedf44233_cgraph">
+<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="115,7,184,33" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12066ce39c36c348d2488991da53aa07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12066ce39c36c348d2488991da53aa07">&#9670;&nbsp;</a></span>reader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int reader </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to simplify working of input_coefficient function. It gets value for one coefficient from stdin. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- variable that gets a value from a user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>OK (0) - it was successfully completed </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">PTR_NUL</td><td>(-2) - there's not memory to declare the variable </td></tr>
+    <tr><td class="paramname">INC_INP</td><td>(-1) - incorrect input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по squaresolver. Последние изменения: Ср 24 Авг 2022 20:08:06. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+warning: The selected output language "russian" has not been updated
+since release 1.8.15.  As a result some sentences may appear in English.
+
+error: failed to run html help compiler on index.hhp

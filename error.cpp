@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <float.h>
 #include "squaresolver.hpp"
 
 void error_handler( int error )
@@ -17,9 +16,7 @@ void error_handler( int error )
     {
         case INC_INP:
         {
-            char sym = '0';
-            while ((sym = getchar()) != '\n')
-                ;
+            clear_buf(stdin);
             printf("incorrect input\n");
             break;
         }

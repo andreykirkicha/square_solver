@@ -1,0 +1,14 @@
+digraph "input_coefficient"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="input_coefficient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="error_handler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cpp.html#a84593bfc4ab0fe98740bd394180983a4",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="clear_buf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a0e09d60122404af814db0135c6a8ab8d",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="reader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a12066ce39c36c348d2488991da53aa07",tooltip=" "];
+}
