@@ -3,43 +3,37 @@
 #include "test.hpp"
 #include "squaresolver.hpp"
 
-void test(struct TEST_DATA (*test)[AMOUNT], int amount, FILE *f)
+void test(struct TEST_DATA *test, int num, FILE *f)
 {
     double x1 = START_VAL, x2 = START_VAL;
-    int i = 0;
+    test_reader(test, f);
 
-    printf("<test_begin>\n\n");
+    printf("%d)", num + 1);
 
-    for ( ; i < amount; i++)
+    if (errno == INC_INP)
     {
-        printf("%d)", i + 1);
-        test_reader(test[i], f);
+        char sym = '0';
+        while ((sym = getc(f)) != '\n')
+            ;
 
-        if (errno == INC_INP)
-        {
-            char sym = '0';
-            while ((sym = getc(f)) != '\n')
-                ;
+        int res = errno;
 
-            int res = errno;
-            printf("\tinput:\n\tincorrect input\n\n"
-                "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
-                res, x1, x2);
-        }
-        else
-        {
-            int res = squaresolver(test[i]->a, test[i]->b, test[i]->c, &(test[i]->x1), &(test[i]->x2));
-            printf("\tinput:\n\ta:\t%lf\n\tb:\t%lf\n\tc:\t%lf\n\n"
-                "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
-                "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
-                test[i]->a, test[i]->b, test[i]->c,
-                res, x1, x2,
-                test[i]->res, test[i]->x1, test[i]->x2);
-        }
-        errno = OK;
+        printf("\tinput:\n\tincorrect input\n\n"
+            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
+            res, x1, x2);
+    }
+    else
+    {
+        int res = squaresolver(test->a, test->b, test->c, &(test->x1), &(test->x2));
+        printf("\tinput:\n\ta:\t%lf\n\tb:\t%lf\n\tc:\t%lf\n\n"
+            "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
+            "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",
+            test->a, test->b, test->c,
+            res, x1, x2,
+            test->res, test->x1, test->x2);
     }
 
-    printf("<test_end>\n\n");
+    errno = OK;
 }
 
 void test_reader(struct TEST_DATA *test, FILE *f)

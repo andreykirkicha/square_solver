@@ -11,7 +11,7 @@ int reader(double *a)
         return errno;
     }
 
-    else if (!scanf("%lf", a) || !finite(*a))
+    if (!scanf("%lf", a) || !finite(*a))
     {
         errno = INC_INP;
         return errno;

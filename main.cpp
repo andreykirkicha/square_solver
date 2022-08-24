@@ -20,8 +20,11 @@ int main()
 {
     errno = OK;
     FILE *f = fopen("test.txt", "r");
+    int i = 0;
 
-    test(&data, AMOUNT, f);
+    printf("<test>\n\n");
+    for ( ; i < AMOUNT; i++)
+        test(&data[i], i, f);
 
     while (1)
     {
