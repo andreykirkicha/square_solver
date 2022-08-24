@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <float.h>
 #include <math.h>
 #include "squaresolver.hpp"
 
-int reader(double *a)
+int reader( double *a )
 {
     if (a == NULL)
     {
@@ -24,7 +23,7 @@ int reader(double *a)
     return errno;
 }
 
-int input_coefficient(double *a, double *b, double *c)
+int input_coefficient( double *a, double *b, double *c )
 {
     printf("a = ");
     if (reader(a) != 0)
@@ -49,7 +48,7 @@ int input_coefficient(double *a, double *b, double *c)
     return 0;
 }
 
-void printer(int res, double x1, double x2)
+void printer( int res, double x1, double x2 )
 {
     switch(res)
     {
@@ -76,6 +75,9 @@ void printer(int res, double x1, double x2)
             break;
         }
         default:
+        {
+            printf("unexpected number of roots\n");
             return;
+        }
     }
 }

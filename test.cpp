@@ -3,7 +3,7 @@
 #include "test.hpp"
 #include "squaresolver.hpp"
 
-void test(struct TEST_DATA *test, int num, FILE *f)
+void test( struct TEST_DATA *test, int num, FILE *f )
 {
     double x1 = START_VAL, x2 = START_VAL;
     test_reader(test, f);
@@ -36,7 +36,7 @@ void test(struct TEST_DATA *test, int num, FILE *f)
     errno = OK;
 }
 
-void test_reader(struct TEST_DATA *test, FILE *f)
+void test_reader( struct TEST_DATA *test, FILE *f )
 {
     if (!fscanf(f, "%lf %lf %lf %lf %lf %s", &(test->a), &(test->b), &(test->c),
         &(test->x1), &(test->x2), &(test->res)) ||

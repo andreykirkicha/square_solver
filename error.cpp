@@ -3,7 +3,7 @@
 #include <float.h>
 #include "squaresolver.hpp"
 
-void error_handler(int error)
+void error_handler( int error )
 {
     if (error == OK)
     {

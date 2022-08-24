@@ -12,13 +12,11 @@ enum errors {
     PTR_NUL = -2
 };
 const double EPS = 0.000002;
-const int ERRLEN = 28;
 
-int reader(double *a);
-int input_coefficient(double *a, double *b, double *c);
-int squaresolver(double a, double b, double c, double *x1, double *x2);
-int linsolver(double b, double c, double *x1);
-void printer(int res, double x1, double x2);
-void error_handler(int error);
-int is_equal(double a, double b, double lim);
-
+int reader( double *a );
+int input_coefficient( double *a, double *b, double *c );
+int squaresolver( double a, double b, double c, double *x1, double *x2 );
+int linsolver( double b, double c, double *x1 );
+void printer( int res, double x1, double x2 );
+void error_handler( int error );
+int is_equal( double a, double b, double lim );

@@ -1,9 +1,8 @@
 #include <math.h>
 #include <stdio.h>
-#include <float.h>
 #include "squaresolver.hpp"
 
-int squaresolver(double a, double b, double c, double *x1, double *x2)
+int squaresolver( double a, double b, double c, double *x1, double *x2 )
 {
     if (x1 == NULL || x2 == NULL)
     {
@@ -15,6 +14,13 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
         return linsolver(b, c, x1);
     else
     {
+        if (is_equal(c, 0, EPS) && !is_equal(b, 0, EPS))
+        {
+            linsolver(a, b, x1);
+            *x2 = 0;
+            return TWO_ROOTS;
+        }
+
         double D = b * b - 4 * a * c;
 
         if (D > 0)
@@ -35,7 +41,7 @@ int squaresolver(double a, double b, double c, double *x1, double *x2)
     }
 }
 
-int linsolver(double b, double c, double *x1)
+int linsolver( double b, double c, double *x1 )
 {
     if (x1 == NULL)
     {
@@ -52,7 +58,7 @@ int linsolver(double b, double c, double *x1)
     }
 }
 
-int is_equal(double a, double b, double lim)
+int is_equal( double a, double b, double lim )
 {
     return (fabs(a - b) < lim);
 }

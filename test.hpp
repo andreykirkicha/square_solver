@@ -11,5 +11,5 @@ struct TEST_DATA {
     char res[ANS_LEN];
 };
 
-void test(struct TEST_DATA *test, int num, FILE *f);
-void test_reader(struct TEST_DATA *test, FILE *f);
+void test( struct TEST_DATA *test, int num, FILE *f );
+void test_reader( struct TEST_DATA *test, FILE *f );
