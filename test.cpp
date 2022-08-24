@@ -24,7 +24,7 @@ void test(struct TEST_DATA *test, int num, FILE *f)
     }
     else
     {
-        int res = squaresolver(test->a, test->b, test->c, &(test->x1), &(test->x2));
+        int res = squaresolver(test->a, test->b, test->c, &x1, &x2);
         printf("\tinput:\n\ta:\t%lf\n\tb:\t%lf\n\tc:\t%lf\n\n"
             "\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
             "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n\n\n",

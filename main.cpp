@@ -22,9 +22,10 @@ int main()
     FILE *f = fopen("test.txt", "r");
     int i = 0;
 
-    printf("<test>\n\n");
+    printf("<test_begin>\n\n");
     for ( ; i < AMOUNT; i++)
         test(&data[i], i, f);
+    printf("<test_end>\n\n");
 
     while (1)
     {
