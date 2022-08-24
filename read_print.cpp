@@ -77,7 +77,8 @@ void printer( int res, double x1, double x2 )
         default:
         {
             printf("unexpected number of roots\n");
-            return;
+            break;
         }
     }
+    return;
 }
