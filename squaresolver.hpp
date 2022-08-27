@@ -3,10 +3,10 @@
     completion of the solving program.
 */
 enum ROOTS {
-    INF_ROOTS   = 0, ///< equation has got infinite number of roots
-    ONE_ROOT    = 1, ///< equation has got one root
-    TWO_ROOTS   = 2, ///< equation has got two roots
-    NO_ROOTS    = 3  ///< equation hasn't got any roots
+    INF_ROOTS, ///< equation has got infinite number of roots
+    ONE_ROOT,  ///< equation has got one root
+    TWO_ROOTS, ///< equation has got two roots
+    NO_ROOTS   ///< equation hasn't got any roots
 };
 
 /*!

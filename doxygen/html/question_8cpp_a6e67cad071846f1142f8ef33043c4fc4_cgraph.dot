@@ -1,0 +1,24 @@
+digraph "test"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="test",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="skip_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a414daf603ed0764e620c131477f3716e",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="test_calculate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357",tooltip=" "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="square_solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="is_zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="linear_solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14",tooltip=" "];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="test_read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb",tooltip=" "];
+  Node7 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>squaresolver: Файл question.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">squaresolver
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл question.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="squaresolver_8hpp_source.html">squaresolver.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="test_8hpp_source.html">test.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для question.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="question_8cpp__incl.png" border="0" usemap="#aquestion_8cpp" alt=""/></div>
+<map name="aquestion_8cpp" id="aquestion_8cpp">
+<area shape="rect" href="squaresolver_8hpp.html" title=" " alt="" coords="271,82,393,108" />
+<area shape="rect" href="test_8hpp.html" title=" " alt="" coords="417,82,487,108" />
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:af6443c5cdc58add0acbd366aa410139a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="question_8cpp.html#af6443c5cdc58add0acbd366aa410139a">ask_question</a> (const char *file_name, bool *session)</td></tr>
+<tr class="separator:af6443c5cdc58add0acbd366aa410139a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67cad071846f1142f8ef33043c4fc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a> (const char *file_name)</td></tr>
+<tr class="separator:a6e67cad071846f1142f8ef33043c4fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f6a66242172ced5e7694a59c5c7f63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="question_8cpp.html#a02f6a66242172ced5e7694a59c5c7f63">interactive_quadratic_solver</a> ()</td></tr>
+<tr class="separator:a02f6a66242172ced5e7694a59c5c7f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="af6443c5cdc58add0acbd366aa410139a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6443c5cdc58add0acbd366aa410139a">&#9670;&nbsp;</a></span>ask_question()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ask_question </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function defines what user wants to do: quit, begin test or solve quadratic equation. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>- name of test file that user will use in case of pressing 't' </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">session</td><td>- current status of session </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="question_8cpp_af6443c5cdc58add0acbd366aa410139a_cgraph.png" border="0" usemap="#aquestion_8cpp_af6443c5cdc58add0acbd366aa410139a_cgraph" alt=""/></div>
+<map name="aquestion_8cpp_af6443c5cdc58add0acbd366aa410139a_cgraph" id="aquestion_8cpp_af6443c5cdc58add0acbd366aa410139a_cgraph">
+<area shape="rect" href="question_8cpp.html#a02f6a66242172ced5e7694a59c5c7f63" title=" " alt="" coords="156,125,300,168" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="867,299,939,325" />
+<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="207,260,250,287" />
+<area shape="rect" href="read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a" title=" " alt="" coords="350,159,472,185" />
+<area shape="rect" href="read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="362,32,460,59" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="528,108,632,135" />
+<area shape="rect" href="read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="523,159,638,185" />
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="706,209,799,236" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="687,159,818,185" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="871,57,935,84" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="704,108,800,135" />
+<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="360,235,462,261" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="542,285,619,312" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02f6a66242172ced5e7694a59c5c7f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f6a66242172ced5e7694a59c5c7f63">&#9670;&nbsp;</a></span>interactive_quadratic_solver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interactive_quadratic_solver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function provides user input, solving quadratic equation and printing solution. </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="question_8cpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph.png" border="0" usemap="#aquestion_8cpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph" alt=""/></div>
+<map name="aquestion_8cpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph" id="aquestion_8cpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a" title=" " alt="" coords="200,32,323,59" />
+<area shape="rect" href="read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="381,83,480,109" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="209,133,313,160" />
+<area shape="rect" href="read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="373,32,488,59" />
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="556,7,649,33" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="537,57,668,84" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="717,7,789,33" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="571,133,635,160" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="383,184,479,211" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e67cad071846f1142f8ef33043c4fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e67cad071846f1142f8ef33043c4fc4">&#9670;&nbsp;</a></span>test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to print results of test. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">test_file_name</td><td>- name of test file </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="question_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph.png" border="0" usemap="#aquestion_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" alt=""/></div>
+<map name="aquestion_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" id="aquestion_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="267,7,339,33" />
+<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="99,57,200,84" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="251,57,355,84" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="264,108,341,135" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="551,57,615,84" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="405,83,501,109" />
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по squaresolver. Последние изменения: Сб 27 Авг 2022 11:52:08. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,4 +1,10 @@
 warning: The selected output language "russian" has not been updated
 since release 1.8.15.  As a result some sentences may appear in English.
 
+D:/Программы/squaresolver/squaresolver.hpp:123: warning: argument 'test_file_name' of command @param is not found in the argument list of test(const char *file_name)
+D:/Программы/squaresolver/question.cpp:33: warning: The following parameter of test(const char *file_name) is not documented:
+  parameter 'file_name'
+D:/Программы/squaresolver/squaresolver.hpp:123: warning: argument 'test_file_name' of command @param is not found in the argument list of test(const char *file_name)
+D:/Программы/squaresolver/squaresolver.hpp:126: warning: The following parameter of test(const char *file_name) is not documented:
+  parameter 'file_name'
 error: failed to run html help compiler on index.hhp

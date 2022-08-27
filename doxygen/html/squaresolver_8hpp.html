@@ -46,22 +46,17 @@ $(function() {
 <div class="title">Файл squaresolver.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;errno.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Граф включаемых заголовочных файлов для squaresolver.hpp:</div>
-<div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp__incl.png" border="0" usemap="#asquaresolver_8hpp" alt=""/></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 Граф файлов, в которые включается этот файл:</div>
 <div class="dyncontent">
 <div class="center"><img src="squaresolver_8hpp__dep__incl.png" border="0" usemap="#asquaresolver_8hppdep" alt=""/></div>
 <map name="asquaresolver_8hppdep" id="asquaresolver_8hppdep">
 <area shape="rect" href="error_8cpp.html" title=" " alt="" coords="7,82,82,108" />
 <area shape="rect" href="main_8cpp.html" title=" " alt="" coords="106,82,180,108" />
-<area shape="rect" href="read__print_8cpp.html" title=" " alt="" coords="204,82,311,108" />
-<area shape="rect" href="solver_8cpp.html" title=" " alt="" coords="335,82,418,108" />
-<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="442,82,508,108" />
+<area shape="rect" href="question_8cpp.html" title=" " alt="" coords="204,82,300,108" />
+<area shape="rect" href="read__print_8cpp.html" title=" " alt="" coords="324,82,431,108" />
+<area shape="rect" href="solver_8cpp.html" title=" " alt="" coords="455,82,538,108" />
+<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="562,82,628,108" />
 </map>
 </div>
 </div>
@@ -69,125 +64,211 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Перечисления</h2></td></tr>
-<tr class="memitem:ac6a66a418b6646df5aa3c82d9fb39d3c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3c">roots</a> { <a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a> = 0
-, <a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a> = 1
-, <a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a> = 2
-, <a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c">NO_ROOTS</a> = 3
+<tr class="memitem:a2cfb9ec67f7eabe94407eefad9ccb048"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a> { <a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048a5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a>
+, <a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048a6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>
+, <a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>
+, <a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048ab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>
  }</td></tr>
-<tr class="separator:ac6a66a418b6646df5aa3c82d9fb39d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc42076253600be964e110149b458971"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971">errors</a> { <a class="el" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0
-, <a class="el" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9">INC_INP</a> = -1
-, <a class="el" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e">PTR_NUL</a> = -2
+<tr class="separator:a2cfb9ec67f7eabe94407eefad9ccb048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622ccac4bed4b5ffcfd1acea83629286"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> { <a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286a2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0
+, <a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286aa0813ae740a896d6bd0ef36f7fe3dba3">INCORRECT_INPUT</a> = -1
  }</td></tr>
-<tr class="separator:acc42076253600be964e110149b458971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a622ccac4bed4b5ffcfd1acea83629286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88a628858f3d9e68be132ffcae7f703"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#ac88a628858f3d9e68be132ffcae7f703">SESSION</a> { <a class="el" href="squaresolver_8hpp.html#ac88a628858f3d9e68be132ffcae7f703adc6f24fd6915a3f2786a1b7045406924">END</a>
+, <a class="el" href="squaresolver_8hpp.html#ac88a628858f3d9e68be132ffcae7f703a49959dd441dcda75d6898cf2c68fb374">CONTINUE</a>
+ }</td></tr>
+<tr class="separator:ac88a628858f3d9e68be132ffcae7f703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad379befe9371e11d10b05fd53ab4bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a> { <a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bbaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>
+, <a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bba0c677fdda6b6e8ddc7a7c760b22ab6d2">SUCCESSFUL</a>
+ }</td></tr>
+<tr class="separator:a3ad379befe9371e11d10b05fd53ab4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a12066ce39c36c348d2488991da53aa07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a12066ce39c36c348d2488991da53aa07">reader</a> (double *a)</td></tr>
-<tr class="separator:a12066ce39c36c348d2488991da53aa07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b43884abaed70b952f06787f9fad483"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a1b43884abaed70b952f06787f9fad483">input_coefficient</a> (double *a, double *b, double *c)</td></tr>
-<tr class="separator:a1b43884abaed70b952f06787f9fad483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a575ca4ad5af18425ca7b32b4cb247b18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a575ca4ad5af18425ca7b32b4cb247b18">squaresolver</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
-<tr class="separator:a575ca4ad5af18425ca7b32b4cb247b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dea016aaca6fd0c5af3aa02898a6f76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a3dea016aaca6fd0c5af3aa02898a6f76">linsolver</a> (double b, double c, double *x1)</td></tr>
-<tr class="separator:a3dea016aaca6fd0c5af3aa02898a6f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9431972a03e6bc15f5145a1fedf44233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a9431972a03e6bc15f5145a1fedf44233">printer</a> (int res, double x1, double x2)</td></tr>
-<tr class="separator:a9431972a03e6bc15f5145a1fedf44233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84593bfc4ab0fe98740bd394180983a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a84593bfc4ab0fe98740bd394180983a4">error_handler</a> (int error)</td></tr>
-<tr class="separator:a84593bfc4ab0fe98740bd394180983a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59407076ee6342ec18d2de0c0b5ebda9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a59407076ee6342ec18d2de0c0b5ebda9">is_equal</a> (double a, double b, double lim)</td></tr>
-<tr class="separator:a59407076ee6342ec18d2de0c0b5ebda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e09d60122404af814db0135c6a8ab8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a0e09d60122404af814db0135c6a8ab8d">clear_buf</a> (FILE *f)</td></tr>
-<tr class="separator:a0e09d60122404af814db0135c6a8ab8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe983e3d4358ebbb20b10645caf9f2a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#afe983e3d4358ebbb20b10645caf9f2a3">read_valid_double</a> (double *a)</td></tr>
+<tr class="separator:afe983e3d4358ebbb20b10645caf9f2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fabb6bc4005e0a964b5f00211f6b45a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a8fabb6bc4005e0a964b5f00211f6b45a">input_coefficients</a> (double *a, double *b, double *c)</td></tr>
+<tr class="separator:a8fabb6bc4005e0a964b5f00211f6b45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677cad337c0dc50f5e67b3a3b9988dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a677cad337c0dc50f5e67b3a3b9988dfe">square_solver</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
+<tr class="separator:a677cad337c0dc50f5e67b3a3b9988dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb4bc300b8ba34c80ead6b6fcfbfe14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14">linear_solver</a> (double b, double c, double *x1)</td></tr>
+<tr class="separator:aefb4bc300b8ba34c80ead6b6fcfbfe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dbfacccb0dd11c32685c7573127a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a38dbfacccb0dd11c32685c7573127a9f">print_solution</a> (int res, double x1, double x2)</td></tr>
+<tr class="separator:a38dbfacccb0dd11c32685c7573127a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e2b8237677e38e9dfeb4f6e86154f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a12e2b8237677e38e9dfeb4f6e86154f5">error_printer</a> (int error)</td></tr>
+<tr class="separator:a12e2b8237677e38e9dfeb4f6e86154f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff33def1f358ea2c4a586274fbe3042d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#aff33def1f358ea2c4a586274fbe3042d">is_zero</a> (double a, double lim=<a class="el" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a>)</td></tr>
+<tr class="separator:aff33def1f358ea2c4a586274fbe3042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414daf603ed0764e620c131477f3716e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a414daf603ed0764e620c131477f3716e">skip_line</a> (FILE *f)</td></tr>
+<tr class="separator:a414daf603ed0764e620c131477f3716e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6443c5cdc58add0acbd366aa410139a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#af6443c5cdc58add0acbd366aa410139a">ask_question</a> (const char *file_name, bool *session)</td></tr>
+<tr class="separator:af6443c5cdc58add0acbd366aa410139a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67cad071846f1142f8ef33043c4fc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a> (const char *file_name)</td></tr>
+<tr class="separator:a6e67cad071846f1142f8ef33043c4fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f6a66242172ced5e7694a59c5c7f63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a02f6a66242172ced5e7694a59c5c7f63">interactive_quadratic_solver</a> ()</td></tr>
+<tr class="separator:a02f6a66242172ced5e7694a59c5c7f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1182d69b41a2b8716433b4cd2f88bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a4f1182d69b41a2b8716433b4cd2f88bb">test_read</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="squaresolver_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, FILE *f)</td></tr>
+<tr class="separator:a4f1182d69b41a2b8716433b4cd2f88bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dd80a1428e6a8704bf5ad81f5055357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357">test_calculate</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="squaresolver_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, int num, FILE *f)</td></tr>
+<tr class="separator:a1dd80a1428e6a8704bf5ad81f5055357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e0ba446aec3661b7a7e6ca8e06c088"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#a32e0ba446aec3661b7a7e6ca8e06c088">read_coefficient</a> (double *a, char coef)</td></tr>
+<tr class="separator:a32e0ba446aec3661b7a7e6ca8e06c088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:afe01386a82fedc016455a43c20280a97"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 0.000002</td></tr>
-<tr class="memdesc:afe01386a82fedc016455a43c20280a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accuracy that is used to compare double values.  <a href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">Подробнее...</a><br /></td></tr>
+<tr class="memitem:afe01386a82fedc016455a43c20280a97"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 2e-6</td></tr>
+<tr class="memdesc:afe01386a82fedc016455a43c20280a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accurancy for comparison of double value and zero.  <a href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">Подробнее...</a><br /></td></tr>
 <tr class="separator:afe01386a82fedc016455a43c20280a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Перечисления</h2>
-<a id="acc42076253600be964e110149b458971"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc42076253600be964e110149b458971">&#9670;&nbsp;</a></span>errors</h2>
+<a id="a622ccac4bed4b5ffcfd1acea83629286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622ccac4bed4b5ffcfd1acea83629286">&#9670;&nbsp;</a></span>ERRORS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#acc42076253600be964e110149b458971">errors</a></td>
+          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>This list is used to indicate errors by numbers. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="acc42076253600be964e110149b458971a2bc49ec37d6a5715dd23e85f1ff5bb59"></a>OK&#160;</td><td class="fielddoc"><p>no errors </p>
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a622ccac4bed4b5ffcfd1acea83629286a2bc49ec37d6a5715dd23e85f1ff5bb59"></a>OK&#160;</td><td class="fielddoc"><p>no errors </p>
 </td></tr>
-<tr><td class="fieldname"><a id="acc42076253600be964e110149b458971af6a95c39bb19b668fb36f7e0eca0a7f9"></a>INC_INP&#160;</td><td class="fielddoc"><p>incorrect input </p>
-</td></tr>
-<tr><td class="fieldname"><a id="acc42076253600be964e110149b458971a861803998773d7a51669f722d4c6620e"></a>PTR_NUL&#160;</td><td class="fielddoc"><p>some pointer has got value NULL </p>
+<tr><td class="fieldname"><a id="a622ccac4bed4b5ffcfd1acea83629286aa0813ae740a896d6bd0ef36f7fe3dba3"></a>INCORRECT_INPUT&#160;</td><td class="fielddoc"><p>some pointer is NULL </p>
 </td></tr>
 </table>
 
 </div>
 </div>
-<a id="ac6a66a418b6646df5aa3c82d9fb39d3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6a66a418b6646df5aa3c82d9fb39d3c">&#9670;&nbsp;</a></span>roots</h2>
+<a id="a3ad379befe9371e11d10b05fd53ab4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad379befe9371e11d10b05fd53ab4bb">&#9670;&nbsp;</a></span>INPUT_STATUS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#ac6a66a418b6646df5aa3c82d9fb39d3c">roots</a></td>
+          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This list is used to define input correctness. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a3ad379befe9371e11d10b05fd53ab4bbaecedb56d1405a60c6069f4a0139bdec5"></a>FAILED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3ad379befe9371e11d10b05fd53ab4bba0c677fdda6b6e8ddc7a7c760b22ab6d2"></a>SUCCESSFUL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a2cfb9ec67f7eabe94407eefad9ccb048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfb9ec67f7eabe94407eefad9ccb048">&#9670;&nbsp;</a></span>ROOTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>This list is used to return description of the result in case of successful completion of the solving program. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac6a66a418b6646df5aa3c82d9fb39d3ca5a79e9e49077da58fe5d46a98f0b5e36"></a>INF_ROOTS&#160;</td><td class="fielddoc"><p>equation has got infinite number of roots </p>
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a2cfb9ec67f7eabe94407eefad9ccb048a5a79e9e49077da58fe5d46a98f0b5e36"></a>INF_ROOTS&#160;</td><td class="fielddoc"><p>equation has got infinite number of roots </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac6a66a418b6646df5aa3c82d9fb39d3ca6700c0f6efd23571cb22aefd2510b1cf"></a>ONE_ROOT&#160;</td><td class="fielddoc"><p>equation has got one root </p>
+<tr><td class="fieldname"><a id="a2cfb9ec67f7eabe94407eefad9ccb048a6700c0f6efd23571cb22aefd2510b1cf"></a>ONE_ROOT&#160;</td><td class="fielddoc"><p>equation has got one root </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac6a66a418b6646df5aa3c82d9fb39d3ca876622d3c0b008da13a3685c64714e81"></a>TWO_ROOTS&#160;</td><td class="fielddoc"><p>equation has got two roots </p>
+<tr><td class="fieldname"><a id="a2cfb9ec67f7eabe94407eefad9ccb048a876622d3c0b008da13a3685c64714e81"></a>TWO_ROOTS&#160;</td><td class="fielddoc"><p>equation has got two roots </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ac6a66a418b6646df5aa3c82d9fb39d3cab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"><p>equation hasn't got any roots </p>
+<tr><td class="fieldname"><a id="a2cfb9ec67f7eabe94407eefad9ccb048ab9a321da349ac1355b717745736ad90c"></a>NO_ROOTS&#160;</td><td class="fielddoc"><p>equation hasn't got any roots </p>
 </td></tr>
 </table>
 
 </div>
 </div>
-<h2 class="groupheader">Функции</h2>
-<a id="a0e09d60122404af814db0135c6a8ab8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e09d60122404af814db0135c6a8ab8d">&#9670;&nbsp;</a></span>clear_buf()</h2>
+<a id="ac88a628858f3d9e68be132ffcae7f703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88a628858f3d9e68be132ffcae7f703">&#9670;&nbsp;</a></span>SESSION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void clear_buf </td>
-          <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
+          <td class="memname">enum <a class="el" href="squaresolver_8hpp.html#ac88a628858f3d9e68be132ffcae7f703">SESSION</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function clears buffer after incorrect input. </p><dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- input stream </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>This list is used to define session status. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac88a628858f3d9e68be132ffcae7f703adc6f24fd6915a3f2786a1b7045406924"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac88a628858f3d9e68be132ffcae7f703a49959dd441dcda75d6898cf2c68fb374"></a>CONTINUE&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
-<a id="a84593bfc4ab0fe98740bd394180983a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84593bfc4ab0fe98740bd394180983a4">&#9670;&nbsp;</a></span>error_handler()</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="af6443c5cdc58add0acbd366aa410139a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6443c5cdc58add0acbd366aa410139a">&#9670;&nbsp;</a></span>ask_question()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void error_handler </td>
+          <td class="memname">void ask_question </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>session</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function defines what user wants to do: quit, begin test or solve quadratic equation. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>- name of test file that user will use in case of pressing 't' </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">session</td><td>- current status of session </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_af6443c5cdc58add0acbd366aa410139a_cgraph.png" border="0" usemap="#asquaresolver_8hpp_af6443c5cdc58add0acbd366aa410139a_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_af6443c5cdc58add0acbd366aa410139a_cgraph" id="asquaresolver_8hpp_af6443c5cdc58add0acbd366aa410139a_cgraph">
+<area shape="rect" href="question_8cpp.html#a02f6a66242172ced5e7694a59c5c7f63" title=" " alt="" coords="156,125,300,168" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="867,299,939,325" />
+<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="207,260,250,287" />
+<area shape="rect" href="read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a" title=" " alt="" coords="350,159,472,185" />
+<area shape="rect" href="read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="362,32,460,59" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="528,108,632,135" />
+<area shape="rect" href="read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="523,159,638,185" />
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="706,209,799,236" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="687,159,818,185" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="871,57,935,84" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="704,108,800,135" />
+<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="360,235,462,261" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="542,285,619,312" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12e2b8237677e38e9dfeb4f6e86154f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e2b8237677e38e9dfeb4f6e86154f5">&#9670;&nbsp;</a></span>error_printer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void error_printer </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>error</em></td><td>)</td>
@@ -204,22 +285,22 @@ $(function() {
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp_a84593bfc4ab0fe98740bd394180983a4_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a84593bfc4ab0fe98740bd394180983a4_cgraph" alt=""/></div>
-<map name="asquaresolver_8hpp_a84593bfc4ab0fe98740bd394180983a4_cgraph" id="asquaresolver_8hpp_a84593bfc4ab0fe98740bd394180983a4_cgraph">
-<area shape="rect" href="read__print_8cpp.html#a0e09d60122404af814db0135c6a8ab8d" title=" " alt="" coords="157,7,232,33" />
+<div class="center"><img src="squaresolver_8hpp_a12e2b8237677e38e9dfeb4f6e86154f5_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a12e2b8237677e38e9dfeb4f6e86154f5_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a12e2b8237677e38e9dfeb4f6e86154f5_cgraph" id="asquaresolver_8hpp_a12e2b8237677e38e9dfeb4f6e86154f5_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="152,7,224,33" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a1b43884abaed70b952f06787f9fad483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b43884abaed70b952f06787f9fad483">&#9670;&nbsp;</a></span>input_coefficient()</h2>
+<a id="a8fabb6bc4005e0a964b5f00211f6b45a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fabb6bc4005e0a964b5f00211f6b45a">&#9670;&nbsp;</a></span>input_coefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int input_coefficient </td>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a> input_coefficients </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -245,36 +326,71 @@ $(function() {
 </div><div class="memdoc">
 <p>This function is used to get equation coefficients from stdin.\ Equation: a*x^2 + b*x + c = 0. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- variable that gets value of coefficient a </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- variable that gets value of coefficient b </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- variable that gets value of coefficient c </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- value of coefficient a </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- value of coefficient b </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- value of coefficient c </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>0 - it was successfully completed </dd>
+<dl class="section return"><dt>Возвращает</dt><dd>SUCCESSFUL - it was successfully completed </dd>
 <dd>
--1 - there's some errors </dd></dl>
+FAILED - there's some errors </dd></dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp_a1b43884abaed70b952f06787f9fad483_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a1b43884abaed70b952f06787f9fad483_cgraph" alt=""/></div>
-<map name="asquaresolver_8hpp_a1b43884abaed70b952f06787f9fad483_cgraph" id="asquaresolver_8hpp_a1b43884abaed70b952f06787f9fad483_cgraph">
-<area shape="rect" href="error_8cpp.html#a84593bfc4ab0fe98740bd394180983a4" title=" " alt="" coords="172,7,273,34" />
-<area shape="rect" href="read__print_8cpp.html#a12066ce39c36c348d2488991da53aa07" title=" " alt="" coords="193,58,252,84" />
-<area shape="rect" href="read__print_8cpp.html#a0e09d60122404af814db0135c6a8ab8d" title=" " alt="" coords="323,7,397,34" />
+<div class="center"><img src="squaresolver_8hpp_a8fabb6bc4005e0a964b5f00211f6b45a_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a8fabb6bc4005e0a964b5f00211f6b45a_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a8fabb6bc4005e0a964b5f00211f6b45a_cgraph" id="asquaresolver_8hpp_a8fabb6bc4005e0a964b5f00211f6b45a_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="181,32,296,59" />
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="364,7,457,34" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="345,58,476,84" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="525,7,597,34" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a59407076ee6342ec18d2de0c0b5ebda9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59407076ee6342ec18d2de0c0b5ebda9">&#9670;&nbsp;</a></span>is_equal()</h2>
+<a id="a02f6a66242172ced5e7694a59c5c7f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f6a66242172ced5e7694a59c5c7f63">&#9670;&nbsp;</a></span>interactive_quadratic_solver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int is_equal </td>
+          <td class="memname">void interactive_quadratic_solver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function provides user input, solving quadratic equation and printing solution. </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph" id="asquaresolver_8hpp_a02f6a66242172ced5e7694a59c5c7f63_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a" title=" " alt="" coords="200,32,323,59" />
+<area shape="rect" href="read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="381,83,480,109" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="209,133,313,160" />
+<area shape="rect" href="read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="373,32,488,59" />
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="556,7,649,33" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="537,57,668,84" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="717,7,789,33" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="571,133,635,160" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="383,184,479,211" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff33def1f358ea2c4a586274fbe3042d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff33def1f358ea2c4a586274fbe3042d">&#9670;&nbsp;</a></span>is_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_zero </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -283,13 +399,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>lim</em>&#160;</td>
+          <td class="paramname"><em>lim</em> = <code><a class="el" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -298,28 +408,27 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function compares two double values with given accuracy. </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>This function compares a double value with zero. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- first value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- second value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">lim</td><td>- accuracy </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- double value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lim</td><td>- accuracy (EPS by default) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>1 - a == b </dd>
+<dl class="section return"><dt>Возвращает</dt><dd>1 - a == 0 </dd>
 <dd>
-0 - a != b </dd></dl>
+0 - a != 0 </dd></dl>
 
 </div>
 </div>
-<a id="a3dea016aaca6fd0c5af3aa02898a6f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dea016aaca6fd0c5af3aa02898a6f76">&#9670;&nbsp;</a></span>linsolver()</h2>
+<a id="aefb4bc300b8ba34c80ead6b6fcfbfe14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb4bc300b8ba34c80ead6b6fcfbfe14">&#9670;&nbsp;</a></span>linear_solver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int linsolver </td>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a> linear_solver </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>b</em>, </td>
@@ -347,7 +456,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- coefficient b </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- coefficient c </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- variable to contain the root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- pointer to root of the equation (if exists) </td></tr>
   </table>
   </dd>
 </dl>
@@ -356,31 +465,25 @@ $(function() {
 ONE_ROOT (1) - equation has got one root </dd>
 <dd>
 INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
-<dl class="exception"><dt>Исключения</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">PTR_NUL</td><td>(-2) - some pointer has got value NULL </td></tr>
-  </table>
-  </dd>
-</dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph" alt=""/></div>
-<map name="asquaresolver_8hpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph" id="asquaresolver_8hpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph">
-<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="128,7,197,33" />
+<div class="center"><img src="squaresolver_8hpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph.png" border="0" usemap="#asquaresolver_8hpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph" id="asquaresolver_8hpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph">
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="153,7,217,33" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a9431972a03e6bc15f5145a1fedf44233"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9431972a03e6bc15f5145a1fedf44233">&#9670;&nbsp;</a></span>printer()</h2>
+<a id="a38dbfacccb0dd11c32685c7573127a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dbfacccb0dd11c32685c7573127a9f">&#9670;&nbsp;</a></span>print_solution()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void printer </td>
+          <td class="memname">void print_solution </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>res</em>, </td>
@@ -406,7 +509,7 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
 </div><div class="memdoc">
 <p>This function puts the result on a screen depending on return values. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>- result/error number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>- result number </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>- first root of the equation (if exists) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>- second root of the equation (if exists) </td></tr>
   </table>
@@ -415,22 +518,67 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp_a9431972a03e6bc15f5145a1fedf44233_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a9431972a03e6bc15f5145a1fedf44233_cgraph" alt=""/></div>
-<map name="asquaresolver_8hpp_a9431972a03e6bc15f5145a1fedf44233_cgraph" id="asquaresolver_8hpp_a9431972a03e6bc15f5145a1fedf44233_cgraph">
-<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="115,7,184,33" />
+<div class="center"><img src="squaresolver_8hpp_a38dbfacccb0dd11c32685c7573127a9f_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a38dbfacccb0dd11c32685c7573127a9f_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a38dbfacccb0dd11c32685c7573127a9f_cgraph" id="asquaresolver_8hpp_a38dbfacccb0dd11c32685c7573127a9f_cgraph">
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="156,7,220,33" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a12066ce39c36c348d2488991da53aa07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12066ce39c36c348d2488991da53aa07">&#9670;&nbsp;</a></span>reader()</h2>
+<a id="a32e0ba446aec3661b7a7e6ca8e06c088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e0ba446aec3661b7a7e6ca8e06c088">&#9670;&nbsp;</a></span>read_coefficient()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int reader </td>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a3ad379befe9371e11d10b05fd53ab4bb">INPUT_STATUS</a> read_coefficient </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>coef</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function gets value for one coefficient from user. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- value of coefficient </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">coef</td><td>- letter designation of coefficient </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_a32e0ba446aec3661b7a7e6ca8e06c088_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a32e0ba446aec3661b7a7e6ca8e06c088_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a32e0ba446aec3661b7a7e6ca8e06c088_cgraph" id="asquaresolver_8hpp_a32e0ba446aec3661b7a7e6ca8e06c088_cgraph">
+<area shape="rect" href="error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="191,7,284,34" />
+<area shape="rect" href="read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="172,58,303,84" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="352,7,424,34" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="afe983e3d4358ebbb20b10645caf9f2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe983e3d4358ebbb20b10645caf9f2a3">&#9670;&nbsp;</a></span>read_valid_double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> read_valid_double </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
@@ -438,31 +586,54 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function is used to simplify working of input_coefficient function. It gets value for one coefficient from stdin. </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>This function is used to simplify working of read_coefficient function. It gets a double value and check if it's valid. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- variable that gets a value from a user </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- a value from a user </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>OK (0) - it was successfully completed </dd></dl>
 <dl class="exception"><dt>Исключения</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">PTR_NUL</td><td>(-2) - there's not memory to declare the variable </td></tr>
-    <tr><td class="paramname">INC_INP</td><td>(-1) - incorrect input </td></tr>
+    <tr><td class="paramname">INCORRECT_INPUT</td><td>(-1) - incorrect input </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a575ca4ad5af18425ca7b32b4cb247b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a575ca4ad5af18425ca7b32b4cb247b18">&#9670;&nbsp;</a></span>squaresolver()</h2>
+<a id="a414daf603ed0764e620c131477f3716e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414daf603ed0764e620c131477f3716e">&#9670;&nbsp;</a></span>skip_line()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int squaresolver </td>
+          <td class="memname">void skip_line </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function clears line in buffer after incorrect input. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- input stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a677cad337c0dc50f5e67b3a3b9988dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677cad337c0dc50f5e67b3a3b9988dfe">&#9670;&nbsp;</a></span>square_solver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a> square_solver </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -503,8 +674,8 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
     <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- coefficient a </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- coefficient b </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- coefficient c </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- variable to contain first root of the equation (if exists) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- variable to contain second root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- pointer to first root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- pointer to second root of the equation (if exists) </td></tr>
   </table>
   </dd>
 </dl>
@@ -515,19 +686,161 @@ TWO_ROOTS (2) - equation has got two roots </dd>
 ONE_ROOT (1) - equation has got one root </dd>
 <dd>
 INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
-<dl class="exception"><dt>Исключения</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">PTR_NUL</td><td>(-2) - some pointer has got value NULL </td></tr>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph" id="asquaresolver_8hpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph">
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="308,32,372,59" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="163,58,259,84" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e67cad071846f1142f8ef33043c4fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e67cad071846f1142f8ef33043c4fc4">&#9670;&nbsp;</a></span>test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to print results of test. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">test_file_name</td><td>- name of test file </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="squaresolver_8hpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph" alt=""/></div>
-<map name="asquaresolver_8hpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph" id="asquaresolver_8hpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph">
-<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="275,32,344,59" />
-<area shape="rect" href="solver_8cpp.html#a3dea016aaca6fd0c5af3aa02898a6f76" title=" " alt="" coords="155,58,224,84" />
+<div class="center"><img src="squaresolver_8hpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" id="asquaresolver_8hpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="552,57,624,84" />
+<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="99,140,200,167" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="251,233,355,260" />
+<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="432,132,475,159" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="264,108,341,135" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="556,233,620,260" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="405,259,501,285" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1dd80a1428e6a8704bf5ad81f5055357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd80a1428e6a8704bf5ad81f5055357">&#9670;&nbsp;</a></span>test_calculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> test_calculate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_test__data.html">Test_data</a> *&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function solves quadratic equation using coefficients from test file if input is correct, otherwise returns error number. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">test</td><td>- structure that is used to contain test data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>- number of test </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- test file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>OK (0) - input was correct </dd>
+<dd>
+INCORRECT_INPUT (-1) - input was incorrect </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph" id="asquaresolver_8hpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph">
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="461,39,533,65" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="160,183,264,209" />
+<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="341,69,384,96" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="173,132,251,159" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="465,183,529,209" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="315,157,411,184" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f1182d69b41a2b8716433b4cd2f88bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1182d69b41a2b8716433b4cd2f88bb">&#9670;&nbsp;</a></span>test_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> test_read </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_test__data.html">Test_data</a> *&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to get test data from .txt file. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- test .txt file </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">test</td><td>- structure that is used to contain test data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>OK (0) - correct input data </dd>
+<dd>
+INCORRECT_INPUT (-1) - incorrect input data </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="squaresolver_8hpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph.png" border="0" usemap="#asquaresolver_8hpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph" alt=""/></div>
+<map name="asquaresolver_8hpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph" id="asquaresolver_8hpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph">
+<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="132,57,175,84" />
+<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="392,7,464,33" />
+<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="224,57,326,84" />
+<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="376,57,480,84" />
+<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="390,108,467,135" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="676,57,740,84" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="531,83,627,109" />
 </map>
 </div>
 
@@ -541,19 +854,19 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const double EPS = 0.000002</td>
+          <td class="memname">const double EPS = 2e-6</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Accuracy that is used to compare double values. </p>
+<p>Accurancy for comparison of double value and zero. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по squaresolver. Последние изменения: Ср 24 Авг 2022 20:08:06. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Документация по squaresolver. Последние изменения: Сб 27 Авг 2022 11:52:08. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

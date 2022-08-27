@@ -1,0 +1,28 @@
+digraph "interactive_quadratic_solver"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="interactive_quadratic\l_solver",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="input_coefficients",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="read_coefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="error_printer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="skip_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a414daf603ed0764e620c131477f3716e",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="read_valid_double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="print_solution",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="is_zero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="square_solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe",tooltip=" "];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="linear_solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14",tooltip=" "];
+  Node10 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

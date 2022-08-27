@@ -46,34 +46,35 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="squaresolver_8hpp_source.html">squaresolver.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Граф включаемых заголовочных файлов для solver.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="solver_8cpp__incl.png" border="0" usemap="#asolver_8cpp" alt=""/></div>
 <map name="asolver_8cpp" id="asolver_8cpp">
-<area shape="rect" href="squaresolver_8hpp.html" title=" " alt="" coords="175,81,297,108" />
+<area shape="rect" href="squaresolver_8hpp.html" title=" " alt="" coords="268,82,391,108" />
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a575ca4ad5af18425ca7b32b4cb247b18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a575ca4ad5af18425ca7b32b4cb247b18">squaresolver</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
-<tr class="separator:a575ca4ad5af18425ca7b32b4cb247b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dea016aaca6fd0c5af3aa02898a6f76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a3dea016aaca6fd0c5af3aa02898a6f76">linsolver</a> (double b, double c, double *x1)</td></tr>
-<tr class="separator:a3dea016aaca6fd0c5af3aa02898a6f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59407076ee6342ec18d2de0c0b5ebda9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9">is_equal</a> (double a, double b, double lim)</td></tr>
-<tr class="separator:a59407076ee6342ec18d2de0c0b5ebda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677cad337c0dc50f5e67b3a3b9988dfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe">square_solver</a> (double a, double b, double c, double *x1, double *x2)</td></tr>
+<tr class="separator:a677cad337c0dc50f5e67b3a3b9988dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefb4bc300b8ba34c80ead6b6fcfbfe14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14">linear_solver</a> (double b, double c, double *x1)</td></tr>
+<tr class="separator:aefb4bc300b8ba34c80ead6b6fcfbfe14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f362d0ded3cfb385be07e61a70d41cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf">is_zero</a> (double a, double lim)</td></tr>
+<tr class="separator:a5f362d0ded3cfb385be07e61a70d41cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="a59407076ee6342ec18d2de0c0b5ebda9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59407076ee6342ec18d2de0c0b5ebda9">&#9670;&nbsp;</a></span>is_equal()</h2>
+<a id="a5f362d0ded3cfb385be07e61a70d41cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f362d0ded3cfb385be07e61a70d41cf">&#9670;&nbsp;</a></span>is_zero()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int is_equal </td>
+          <td class="memname">int is_zero </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -82,13 +83,7 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>lim</em>&#160;</td>
+          <td class="paramname"><em>lim</em> = <code><a class="el" href="squaresolver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -97,28 +92,27 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function compares two double values with given accuracy. </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>This function compares a double value with zero. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- first value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- second value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">lim</td><td>- accuracy </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- double value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lim</td><td>- accuracy (EPS by default) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>1 - a == b </dd>
+<dl class="section return"><dt>Возвращает</dt><dd>1 - a == 0 </dd>
 <dd>
-0 - a != b </dd></dl>
+0 - a != 0 </dd></dl>
 
 </div>
 </div>
-<a id="a3dea016aaca6fd0c5af3aa02898a6f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dea016aaca6fd0c5af3aa02898a6f76">&#9670;&nbsp;</a></span>linsolver()</h2>
+<a id="aefb4bc300b8ba34c80ead6b6fcfbfe14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb4bc300b8ba34c80ead6b6fcfbfe14">&#9670;&nbsp;</a></span>linear_solver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int linsolver </td>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a> linear_solver </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>b</em>, </td>
@@ -146,7 +140,7 @@ $(function() {
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- coefficient b </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- coefficient c </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- variable to contain the root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- pointer to root of the equation (if exists) </td></tr>
   </table>
   </dd>
 </dl>
@@ -155,31 +149,25 @@ $(function() {
 ONE_ROOT (1) - equation has got one root </dd>
 <dd>
 INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
-<dl class="exception"><dt>Исключения</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">PTR_NUL</td><td>(-2) - some pointer has got value NULL </td></tr>
-  </table>
-  </dd>
-</dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="solver_8cpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph.png" border="0" usemap="#asolver_8cpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph" alt=""/></div>
-<map name="asolver_8cpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph" id="asolver_8cpp_a3dea016aaca6fd0c5af3aa02898a6f76_cgraph">
-<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="128,7,197,33" />
+<div class="center"><img src="solver_8cpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph.png" border="0" usemap="#asolver_8cpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph" alt=""/></div>
+<map name="asolver_8cpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph" id="asolver_8cpp_aefb4bc300b8ba34c80ead6b6fcfbfe14_cgraph">
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="153,7,217,33" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a575ca4ad5af18425ca7b32b4cb247b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a575ca4ad5af18425ca7b32b4cb247b18">&#9670;&nbsp;</a></span>squaresolver()</h2>
+<a id="a677cad337c0dc50f5e67b3a3b9988dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677cad337c0dc50f5e67b3a3b9988dfe">&#9670;&nbsp;</a></span>square_solver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int squaresolver </td>
+          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a2cfb9ec67f7eabe94407eefad9ccb048">ROOTS</a> square_solver </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>a</em>, </td>
@@ -220,8 +208,8 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
     <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- coefficient a </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- coefficient b </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>- coefficient c </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- variable to contain first root of the equation (if exists) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- variable to contain second root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- pointer to first root of the equation (if exists) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- pointer to second root of the equation (if exists) </td></tr>
   </table>
   </dd>
 </dl>
@@ -232,19 +220,13 @@ TWO_ROOTS (2) - equation has got two roots </dd>
 ONE_ROOT (1) - equation has got one root </dd>
 <dd>
 INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
-<dl class="exception"><dt>Исключения</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">PTR_NUL</td><td>(-2) - some pointer has got value NULL </td></tr>
-  </table>
-  </dd>
-</dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="solver_8cpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph.png" border="0" usemap="#asolver_8cpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph" alt=""/></div>
-<map name="asolver_8cpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph" id="asolver_8cpp_a575ca4ad5af18425ca7b32b4cb247b18_cgraph">
-<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="275,32,344,59" />
-<area shape="rect" href="solver_8cpp.html#a3dea016aaca6fd0c5af3aa02898a6f76" title=" " alt="" coords="155,58,224,84" />
+<div class="center"><img src="solver_8cpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph.png" border="0" usemap="#asolver_8cpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph" alt=""/></div>
+<map name="asolver_8cpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph" id="asolver_8cpp_a677cad337c0dc50f5e67b3a3b9988dfe_cgraph">
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="308,32,372,59" />
+<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="163,58,259,84" />
 </map>
 </div>
 
@@ -253,7 +235,7 @@ INF_ROOTS (0) - equation has got infinite number of roots </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по squaresolver. Последние изменения: Ср 24 Авг 2022 20:08:06. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Документация по squaresolver. Последние изменения: Сб 27 Авг 2022 11:52:08. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
