@@ -1,3 +1,8 @@
+#ifndef TEST_HPP
+#define TEST_HPP
+
+#include "squaresolver.hpp"
+
 const int AMOUNT    =  10;  ///< Amount of tests
 const int ANS_LEN   =  16;  ///< Max length of answer
 
@@ -14,3 +19,25 @@ struct Test_data {
 };
 
 const int ARGUMENTS_NUMBER = 6; ///< number of arguments in every string of test file
+
+/*!
+    This function is used to get test data from .txt file.
+    \param[in] f     - test .txt file
+    \param[out] test - structure that is used to contain test data
+    \return OK (0)               - correct input data
+    \return INCORRECT_INPUT (-1) - incorrect input data
+*/
+ERRORS test_read( struct Test_data *test, FILE *f );
+
+/*!
+    This function solves quadratic equation using coefficients from test file if input is correct,
+    otherwise returns error number.
+    \param[in] test - structure that is used to contain test data
+    \param[in] num  - number of test
+    \param[in] f    - test file
+    \return OK (0) - input was correct
+    \return INCORRECT_INPUT (-1) - input was incorrect
+*/
+ERRORS test_calculate( struct Test_data *test, int num, FILE *f );
+
+#endif

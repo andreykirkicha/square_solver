@@ -1,3 +1,6 @@
+#ifndef SQUARESOLVER_HPP
+#define SQUARESOLVER_HPP
+
 /*!
     This list is used to return description of the result in case of successful
     completion of the solving program.
@@ -15,14 +18,6 @@ enum ROOTS {
 enum ERRORS {
     OK              =  0, ///< no errors
     INCORRECT_INPUT = -1, ///< some pointer is NULL
-};
-
-/*!
-    This list is used to define session status.
-*/
-enum SESSION {
-    END,
-    CONTINUE
 };
 
 /*!
@@ -131,28 +126,14 @@ void test( const char *file_name );
 void interactive_quadratic_solver();
 
 /*!
-    This function is used to get test data from .txt file.
-    \param[in] f     - test .txt file
-    \param[out] test - structure that is used to contain test data
-    \return OK (0)               - correct input data
-    \return INCORRECT_INPUT (-1) - incorrect input data
-*/
-ERRORS test_read( struct Test_data *test, FILE *f );
-
-/*!
-    This function solves quadratic equation using coefficients from test file if input is correct,
-    otherwise returns error number.
-    \param[in] test - structure that is used to contain test data
-    \param[in] num  - number of test
-    \param[in] f    - test file
-    \return OK (0) - input was correct
-    \return INCORRECT_INPUT (-1) - input was incorrect
-*/
-ERRORS test_calculate( struct Test_data *test, int num, FILE *f );
-
-/*!
     This function gets value for one coefficient from user.
     \param[in] a    - value of coefficient
     \param[in] coef - letter designation of coefficient
 */
 INPUT_STATUS read_coefficient( double *a, char coef );
+
+void request_for_windows( const char *file_name, bool *session_continue );
+void request_for_other_systems( const char *file_name, bool *session_continue );
+void end_of_iteration();
+
+#endif

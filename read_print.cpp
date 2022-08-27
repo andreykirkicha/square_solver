@@ -28,6 +28,8 @@ INPUT_STATUS input_coefficients( double *a, double *b, double *c )
 
 INPUT_STATUS read_coefficient( double *a, char coef )
 {
+    assert(a != NULL);
+
     printf("%c = ", coef);
 
     int read_status = read_valid_double(a);
@@ -71,6 +73,8 @@ void print_solution( int res, double x1, double x2 )
 
 void skip_line( FILE *f )
 {
+    assert(f != NULL);
+
     char sym = '\0';
 
     do

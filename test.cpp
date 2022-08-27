@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <math.h>
+#include <assert.h>
 #include "test.hpp"
 #include "squaresolver.hpp"
 
 ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
 {
+    assert(test != NULL);
+    assert(finite(num));
+    assert(f != NULL);
+
     double x1 = 0;
     double x2 = 0;
 
@@ -84,6 +89,9 @@ ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
 
 ERRORS test_read( struct Test_data *test, FILE *f )
 {
+    assert(test != NULL);
+    assert(f != NULL);
+
     if (fscanf(f, "%lf %lf %lf %lf %lf %s", &(test->a), &(test->b), &(test->c),
         &(test->x1), &(test->x2), test->res) != ARGUMENTS_NUMBER ||
         !finite(test->a) || !finite(test->b) || !finite(test->c))
@@ -96,4 +104,3 @@ ERRORS test_read( struct Test_data *test, FILE *f )
 
     return OK;
 }
-

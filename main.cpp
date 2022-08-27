@@ -4,10 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    bool session = CONTINUE;
+    bool session_continue = true;
 
-    while (session)
-        ask_question(argv[1], &session);
+    while (session_continue)
+        ask_question(argv[1], &session_continue);
 
     return 0;
 }
