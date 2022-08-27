@@ -108,13 +108,6 @@ int is_zero( double a, double lim = EPS );
 void skip_line( FILE *f );
 
 /*!
-    This function defines what user wants to do: quit, begin test or solve quadratic equation.
-    \param[in] file_name - name of test file that user will use in case of pressing 't'
-    \param[out] session  - current status of session
-*/
-void ask_question( const char *file_name, bool *session );
-
-/*!
     This function is used to print results of test.
     \param[in] test_file_name - name of test file
 */
@@ -132,8 +125,7 @@ void interactive_quadratic_solver();
 */
 INPUT_STATUS read_coefficient( double *a, char coef );
 
-void request_for_windows( const char *file_name, bool *session_continue );
-void request_for_other_systems( const char *file_name, bool *session_continue );
+void request( const char *file_name, bool *session_continue );
 void end_of_iteration();
 
 #endif

@@ -1,9 +1,3 @@
-#if SYSTEM == WINDOWS
-    #define USE_CONIO_H true
-#else
-    #define USE_CONIO_H false
-#endif
-
 #include <stdio.h>
 #include <assert.h>
 #include <errno.h>
@@ -11,16 +5,72 @@
 #include "squaresolver.hpp"
 #include "test.hpp"
 
-void ask_question( const char *file_name, bool *session_continue )
+#if SYSTEM == WINDOWS
+
+void request( const char *file_name, bool *session_continue )
 {
     assert(file_name != NULL);
     assert(session_continue != NULL);
 
-    if (USE_CONIO_H == true)
-        request_for_windows(file_name, session_continue);
-    else
-        request_for_other_systems(file_name, session_continue);
+    printf("press 'q' to quit, 't' to begin test or other key to start solving\n");
+
+    char option = _getch();
+
+    switch(option)
+    {
+        case 'q':
+            *session_continue = false;
+            break;
+        case 't':
+            test(file_name);
+            break;
+        default:
+            interactive_quadratic_solver();
+            break;
+    }
 }
+
+#else
+
+void request( const char *file_name, bool *session_continue )
+{
+    assert(file_name != NULL);
+    assert(session_continue != NULL);
+
+    printf("press 'q' to quit, 't' to begin test or enter to start solving\n");
+
+    char option = getchar();
+
+    switch(option)
+    {
+        case 'q':
+            if (getchar() != '\n')
+            {
+                end_of_iteration();
+                break;
+            }
+            *session_continue = false;
+            break;
+        case 't':
+            test(file_name);
+            skip_line(stdin);
+            break;
+        case '\n':
+            interactive_quadratic_solver();
+            break;
+        default:
+            end_of_iteration();
+            break;
+    }
+}
+
+void end_of_iteration()
+{
+    skip_line(stdin);
+    printf("\n");
+}
+
+#endif
 
 void test( const char *file_name )
 {
@@ -61,60 +111,5 @@ void interactive_quadratic_solver()
 
     printf("ans: ");
     print_solution(res, x1, x2);
-    printf("\n");
-}
-
-void request_for_windows( const char *file_name, bool *session_continue )
-{
-    printf("press 'q' to quit, 't' to begin test or other key to start solving\n");
-
-    char option = _getch();
-
-    switch(option)
-    {
-        case 'q':
-            *session_continue = false;
-            break;
-        case 't':
-            test(file_name);
-            break;
-        default:
-            interactive_quadratic_solver();
-            break;
-    }
-}
-
-void request_for_other_systems( const char *file_name, bool *session_continue )
-{
-    printf("press 'q' to quit, 't' to begin test or enter to start solving\n");
-
-    char option = getchar();
-
-    switch(option)
-    {
-        case 'q':
-            if (getchar() != '\n')
-            {
-                end_of_iteration();
-                break;
-            }
-            *session_continue = false;
-            break;
-        case 't':
-            test(file_name);
-            skip_line(stdin);
-            break;
-        case '\n':
-            interactive_quadratic_solver();
-            break;
-        default:
-            end_of_iteration();
-            break;
-    }
-}
-
-void end_of_iteration()
-{
-    skip_line(stdin);
     printf("\n");
 }
