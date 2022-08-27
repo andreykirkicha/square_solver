@@ -5,12 +5,16 @@
 
 ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
 {
-    assert(x1 != NULL && x2 != NULL && finite(a) && finite(b) && finite(c));
+    assert(x1 != NULL);
+    assert(x2 != NULL);
+    assert(finite(a));
+    assert(finite(b));
+    assert(finite(c));
 
-    if (is_equal(a, 0)) // TODO: is_zero? :)
+    if (is_zero(a))
         return linear_solver(b, c, x1);
 
-    if (is_equal(c, 0) && !is_equal(b, 0)) // TODO: is_zero? :)
+    if (is_zero(c) && !is_zero(b))
     {
         linear_solver(a, b, x1);
         *x2 = 0;
@@ -18,22 +22,19 @@ ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
         return TWO_ROOTS;
     }
 
-    // TODO: please, use same naming style across all project
-    //       this is the only local variable i've ever seen here that
-    //       starts with a capital letter, fix it!
-    double Discriminant = b * b - 4 * a * c;
+    double discriminant = b * b - 4 * a * c;
 
-    if (Discriminant > EPS)
+    if (discriminant > EPS)
     {
-        double sqrtDiscriminant = sqrt(Discriminant);
+        double sqrt_discriminant = sqrt(discriminant);
 
-        *x1 = (-b - sqrtDiscriminant) / (2 * a);
-        *x2 = (-b + sqrtDiscriminant) / (2 * a);
+        *x1 = (-b - sqrt_discriminant) / (2 * a);
+        *x2 = (-b + sqrt_discriminant) / (2 * a);
 
         return TWO_ROOTS;
     }
 
-    if (is_equal(Discriminant, 0)) // TODO: Am I imagining or is this is_zero too?)
+    if (is_zero(discriminant))
     {
         *x1 = -b / (2 * a);
 
@@ -45,19 +46,21 @@ ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
 
 ROOTS linear_solver( double b, double c, double *x1 )
 {
-    assert(x1 != NULL && finite(b) && finite(c));
+    assert(x1 != NULL);
+    assert(finite(b));
+    assert(finite(c));
 
-    if (is_equal(b, 0))  // TODO: :)
-        return (is_equal(c, 0)) ? INF_ROOTS : NO_ROOTS;
+    if (is_zero(b))
+        return (is_zero(c)) ? INF_ROOTS : NO_ROOTS;
 
     *x1 = -c / b;
 
     return ONE_ROOT;
 }
 
-int is_equal( double a, double b, double lim )
+int is_zero( double a, double lim )
 {
-    assert(finite(a) && finite(b));
+    assert(finite(a));
 
-    return (fabs(a - b) < lim);
+    return (fabs(a) < lim);
 }

@@ -1,21 +1,13 @@
 #include <stdio.h>
 #include <assert.h>
-#include <string.h>
+#include <errno.h>
 #include "squaresolver.hpp"
 #include "test.hpp"
 
-void ask_question( char *argv[], bool *session ) // ask_question give_answer solve_linear
+void ask_question( const char *file_name, bool *session )
 {
+    assert(file_name != NULL);
     assert(session != NULL);
-
-    // TODO: tests are ONLY intended for programmer, user shouldn't have
-    // option to run them (it's too scary for most users, and useless anyway)
-
-    // To accomplish this you can have two different files with main()
-    // one for interactive use, and other for running tests.
-
-    // This would imply manual use of compiler instead of Code::Blocks
-    // which is a very good thing for learning!
 
     printf("press 'q' to quit, 't' to begin test or enter to start solving\n");
     char option = getchar();
@@ -26,29 +18,29 @@ void ask_question( char *argv[], bool *session ) // ask_question give_answer sol
             *session = END;
             break;
         case 't':
-            test(argv); // TODO: pass only what's needed (ergo, const char* test_file_name)
+            test(file_name);
             break;
         case '\n':
-            input_calculate_output();
+            interactive_quadratic_solver();
             break;
         default:
             printf("\n");
-            clear_buf(stdin);
+            skip_line(stdin);
             break;
     }
 }
 
-// TODO: change signature, TODO next to this function's usage explains this in detail
-void test( char *argv[] ) // TODO: we already have TODO for project structure (splitting in different headers)
-                          // but this definitely belongs in test.hpp
+void test( const char *file_name )
 {
-    struct TEST_DATA data[AMOUNT] = {};
-    FILE *test_file = fopen(argv[1], "r");
+    struct Test_data data[AMOUNT] = {};
+    FILE *test_file = fopen(file_name, "r");
+
+    assert(file_name != NULL);
 
     if (test_file == NULL)
     {
-        // TODO: Can you use perror to describe reason for failure?
-        error_printer(CNT_OP);
+        perror("error");
+        printf("\n");
 
         return;
     }
@@ -58,10 +50,10 @@ void test( char *argv[] ) // TODO: we already have TODO for project structure (s
         test_calculate(&data[i], i, test_file);
     printf("<test_end>\n\n");
 
-    clear_buf(stdin);
+    skip_line(stdin);
 }
 
-void input_calculate_output() // TODO: rename to something like interactive_quadractic_solver()
+void interactive_quadratic_solver()
 {
     printf("--------------------------------------------------------------\n");
     printf("equation: a*x^2 + b*x + c = 0\n");
@@ -77,7 +69,7 @@ void input_calculate_output() // TODO: rename to something like interactive_quad
     double x2 = 0;
     double res = square_solver(a, b, c, &x1, &x2);
 
-    printf("ans: "); // Somehow this is not error_printer and it shouldn't be, good job!
-    printer(res, x1, x2);
+    printf("ans: ");
+    print_solution(res, x1, x2);
     printf("\n");
 }
