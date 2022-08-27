@@ -21,7 +21,7 @@ struct TEST_DATA {
     coefficients of equation a*x^2 + b*x + c = 0 (a, b, c),
     roots of this equation (x1, x2) and description of the result (res).
 */
-void test( struct TEST_DATA *test, int num, FILE *f );
+//ERRORS test_calculate( struct TEST_DATA *test, int num, FILE *f );
 /*!
     This function is used to copy user's test data from .txt file to TEST_DATA structure.
     \param[in] test - element of array of TEST_DATA structures that contains user's input and expected output.
@@ -29,7 +29,7 @@ void test( struct TEST_DATA *test, int num, FILE *f );
     coefficients of equation a*x^2 + b*x + c = 0 (a, b, c),
     roots of this equation (x1, x2) and description of the result (res).
 */
-void test_reader( struct TEST_DATA *test, FILE *f );
+//ERRORS test_reader( struct TEST_DATA *test, FILE *f );
 /*!
     This function is used to fill TEST_DATA structure with default values.
     \param[in] test - element of array of TEST_DATA structures that contains user's input and expected output.
