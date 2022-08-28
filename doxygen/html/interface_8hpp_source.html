@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>squaresolver: Исходный файл interface.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">squaresolver
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">interface.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="interface_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INTERFACE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INTERFACE_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="solver_8hpp.html">solver.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error_8hpp.html">error.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940b">   10</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940b">Input_status</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940baecedb56d1405a60c6069f4a0139bdec5">   11</a></span>&#160;    <a class="code" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940baecedb56d1405a60c6069f4a0139bdec5">FAILED</a>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940ba0c677fdda6b6e8ddc7a7c760b22ab6d2">SUCCESSFUL</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940ba0c677fdda6b6e8ddc7a7c760b22ab6d2">   13</a></span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a> <a class="code" href="interface_8hpp.html#a38cbd1e1a77607ca671449e1e93bbbf2">read_valid_double</a>( <span class="keywordtype">double</span> *a );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940b">Input_status</a> <a class="code" href="interface_8hpp.html#afd20c160a8b7e223d357912a1b78bb11">input_coefficients</a>( <span class="keywordtype">double</span> *a, <span class="keywordtype">double</span> *b, <span class="keywordtype">double</span> *c );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940b">Input_status</a> <a class="code" href="interface_8hpp.html#a37a4135e5087e4064f6c41a9d4bcc31c">read_coefficient</a>( <span class="keywordtype">double</span> *a, <span class="keywordtype">char</span> coef );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8hpp.html#a414daf603ed0764e620c131477f3716e">skip_line</a>( FILE *f );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8hpp.html#a38dbfacccb0dd11c32685c7573127a9f">print_solution</a>( <span class="keywordtype">int</span> res, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> x2 );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> <a class="code" href="interface_8hpp.html#a02f6a66242172ced5e7694a59c5c7f63">interactive_quadratic_solver</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aerror_8hpp_html"><div class="ttname"><a href="error_8hpp.html">error.hpp</a></div></div>
+<div class="ttc" id="aerror_8hpp_html_a8fb872c72e116bbd3eba31f48d78e76b"><div class="ttname"><a href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a></div><div class="ttdeci">Errors</div><div class="ttdef"><b>Definition:</b> error.hpp:7</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a02f6a66242172ced5e7694a59c5c7f63"><div class="ttname"><a href="interface_8hpp.html#a02f6a66242172ced5e7694a59c5c7f63">interactive_quadratic_solver</a></div><div class="ttdeci">void interactive_quadratic_solver()</div><div class="ttdef"><b>Definition:</b> interface.cpp:93</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a1789b878f1079b3af0a5e4c8ce87940b"><div class="ttname"><a href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940b">Input_status</a></div><div class="ttdeci">Input_status</div><div class="ttdef"><b>Definition:</b> interface.hpp:10</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a1789b878f1079b3af0a5e4c8ce87940ba0c677fdda6b6e8ddc7a7c760b22ab6d2"><div class="ttname"><a href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940ba0c677fdda6b6e8ddc7a7c760b22ab6d2">SUCCESSFUL</a></div><div class="ttdeci">@ SUCCESSFUL</div><div class="ttdef"><b>Definition:</b> interface.hpp:12</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a1789b878f1079b3af0a5e4c8ce87940baecedb56d1405a60c6069f4a0139bdec5"><div class="ttname"><a href="interface_8hpp.html#a1789b878f1079b3af0a5e4c8ce87940baecedb56d1405a60c6069f4a0139bdec5">FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition:</b> interface.hpp:11</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a37a4135e5087e4064f6c41a9d4bcc31c"><div class="ttname"><a href="interface_8hpp.html#a37a4135e5087e4064f6c41a9d4bcc31c">read_coefficient</a></div><div class="ttdeci">Input_status read_coefficient(double *a, char coef)</div><div class="ttdef"><b>Definition:</b> interface.cpp:31</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a38cbd1e1a77607ca671449e1e93bbbf2"><div class="ttname"><a href="interface_8hpp.html#a38cbd1e1a77607ca671449e1e93bbbf2">read_valid_double</a></div><div class="ttdeci">Errors read_valid_double(double *a)</div><div class="ttdef"><b>Definition:</b> interface.cpp:8</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a38dbfacccb0dd11c32685c7573127a9f"><div class="ttname"><a href="interface_8hpp.html#a38dbfacccb0dd11c32685c7573127a9f">print_solution</a></div><div class="ttdeci">void print_solution(int res, double x1, double x2)</div><div class="ttdef"><b>Definition:</b> interface.cpp:48</div></div>
+<div class="ttc" id="ainterface_8hpp_html_a414daf603ed0764e620c131477f3716e"><div class="ttname"><a href="interface_8hpp.html#a414daf603ed0764e620c131477f3716e">skip_line</a></div><div class="ttdeci">void skip_line(FILE *f)</div><div class="ttdef"><b>Definition:</b> interface.cpp:80</div></div>
+<div class="ttc" id="ainterface_8hpp_html_afd20c160a8b7e223d357912a1b78bb11"><div class="ttname"><a href="interface_8hpp.html#afd20c160a8b7e223d357912a1b78bb11">input_coefficients</a></div><div class="ttdeci">Input_status input_coefficients(double *a, double *b, double *c)</div><div class="ttdef"><b>Definition:</b> interface.cpp:22</div></div>
+<div class="ttc" id="asolver_8hpp_html"><div class="ttname"><a href="solver_8hpp.html">solver.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по squaresolver. Последние изменения: Вс 28 Авг 2022 13:52:55. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

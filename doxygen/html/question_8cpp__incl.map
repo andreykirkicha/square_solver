@@ -1,4 +1,7 @@
 <map id="question.cpp" name="question.cpp">
-<area shape="rect" href="$squaresolver_8hpp.html" title=" " alt="" coords="271,82,393,108" />
-<area shape="rect" href="$test_8hpp.html" title=" " alt="" coords="417,82,487,108" />
+<area shape="rect" href="$test_8hpp.html" title=" " alt="" coords="271,81,340,108" />
+<area shape="rect" href="$question_8hpp.html" title=" " alt="" coords="364,81,460,108" />
+<area shape="rect" href="$interface_8hpp.html" title=" " alt="" coords="484,81,583,108" />
+<area shape="rect" href="$error_8hpp.html" title=" " alt="" coords="331,156,405,183" />
+<area shape="rect" href="$solver_8hpp.html" title=" " alt="" coords="492,156,575,183" />
 </map>

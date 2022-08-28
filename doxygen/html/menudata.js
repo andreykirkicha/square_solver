@@ -35,7 +35,6 @@ var menudata={children:[
 {text:"Список членов всех файлов",url:"globals.html",children:[
 {text:"Указатель",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
 {text:"e",url:"globals.html#index_e"},
 {text:"f",url:"globals.html#index_f"},
 {text:"i",url:"globals.html#index_i"},
@@ -47,7 +46,15 @@ var menudata={children:[
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"t",url:"globals.html#index_t"}]},
-{text:"Функции",url:"globals_func.html"},
+{text:"Функции",url:"globals_func.html",children:[
+{text:"e",url:"globals_func.html#index_e"},
+{text:"i",url:"globals_func.html#index_i"},
+{text:"l",url:"globals_func.html#index_l"},
+{text:"m",url:"globals_func.html#index_m"},
+{text:"p",url:"globals_func.html#index_p"},
+{text:"r",url:"globals_func.html#index_r"},
+{text:"s",url:"globals_func.html#index_s"},
+{text:"t",url:"globals_func.html#index_t"}]},
 {text:"Переменные",url:"globals_vars.html"},
 {text:"Перечисления",url:"globals_enum.html"},
 {text:"Элементы перечислений",url:"globals_eval.html"}]}]}]}

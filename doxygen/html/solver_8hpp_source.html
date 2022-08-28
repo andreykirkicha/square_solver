@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>squaresolver: Исходный файл solver.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">squaresolver
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">solver.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="solver_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SOLVER_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SOLVER_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692a">    8</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692a">Roots</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36">    9</a></span>&#160;    <a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a>, </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf">   10</a></span>&#160;    <a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a>,  </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81">   11</a></span>&#160;    <a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a>, </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aab9a321da349ac1355b717745736ad90c">NO_ROOTS</a>   </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aab9a321da349ac1355b717745736ad90c">   13</a></span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="solver_8hpp.html#afe01386a82fedc016455a43c20280a97">   15</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="solver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 2e-6; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692a">Roots</a> <a class="code" href="solver_8hpp.html#a1eb24f891c892c102e3413c143e472be">square_solver</a>( <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> c, <span class="keywordtype">double</span> *x1, <span class="keywordtype">double</span> *x2 );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692a">Roots</a> <a class="code" href="solver_8hpp.html#ab9fe58d0f7bcb2b5b193fb612c923487">linear_solver</a>( <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> c, <span class="keywordtype">double</span> *x1 );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8hpp.html#aff33def1f358ea2c4a586274fbe3042d">is_zero</a>( <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> lim = <a class="code" href="solver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">int</span> <a class="code" href="solver_8hpp.html#a63749391b7a442f3270be784368be4c0">is_equal</a>( <span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> lim = <a class="code" href="solver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a> );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asolver_8hpp_html_a1eb24f891c892c102e3413c143e472be"><div class="ttname"><a href="solver_8hpp.html#a1eb24f891c892c102e3413c143e472be">square_solver</a></div><div class="ttdeci">Roots square_solver(double a, double b, double c, double *x1, double *x2)</div><div class="ttdef"><b>Definition:</b> solver.cpp:7</div></div>
+<div class="ttc" id="asolver_8hpp_html_a34f6126547cfdaeca6fb82d45a97692a"><div class="ttname"><a href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692a">Roots</a></div><div class="ttdeci">Roots</div><div class="ttdef"><b>Definition:</b> solver.hpp:8</div></div>
+<div class="ttc" id="asolver_8hpp_html_a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36"><div class="ttname"><a href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</a></div><div class="ttdeci">@ INF_ROOTS</div><div class="ttdoc">equation has got infinite number of Roots</div><div class="ttdef"><b>Definition:</b> solver.hpp:9</div></div>
+<div class="ttc" id="asolver_8hpp_html_a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf"><div class="ttname"><a href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa6700c0f6efd23571cb22aefd2510b1cf">ONE_ROOT</a></div><div class="ttdeci">@ ONE_ROOT</div><div class="ttdoc">equation has got one root</div><div class="ttdef"><b>Definition:</b> solver.hpp:10</div></div>
+<div class="ttc" id="asolver_8hpp_html_a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81"><div class="ttname"><a href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aa876622d3c0b008da13a3685c64714e81">TWO_ROOTS</a></div><div class="ttdeci">@ TWO_ROOTS</div><div class="ttdoc">equation has got two Roots</div><div class="ttdef"><b>Definition:</b> solver.hpp:11</div></div>
+<div class="ttc" id="asolver_8hpp_html_a34f6126547cfdaeca6fb82d45a97692aab9a321da349ac1355b717745736ad90c"><div class="ttname"><a href="solver_8hpp.html#a34f6126547cfdaeca6fb82d45a97692aab9a321da349ac1355b717745736ad90c">NO_ROOTS</a></div><div class="ttdeci">@ NO_ROOTS</div><div class="ttdoc">equation hasn't got any Roots</div><div class="ttdef"><b>Definition:</b> solver.hpp:12</div></div>
+<div class="ttc" id="asolver_8hpp_html_a63749391b7a442f3270be784368be4c0"><div class="ttname"><a href="solver_8hpp.html#a63749391b7a442f3270be784368be4c0">is_equal</a></div><div class="ttdeci">int is_equal(double a, double b, double lim=EPS)</div><div class="ttdef"><b>Definition:</b> solver.cpp:70</div></div>
+<div class="ttc" id="asolver_8hpp_html_ab9fe58d0f7bcb2b5b193fb612c923487"><div class="ttname"><a href="solver_8hpp.html#ab9fe58d0f7bcb2b5b193fb612c923487">linear_solver</a></div><div class="ttdeci">Roots linear_solver(double b, double c, double *x1)</div><div class="ttdef"><b>Definition:</b> solver.cpp:48</div></div>
+<div class="ttc" id="asolver_8hpp_html_afe01386a82fedc016455a43c20280a97"><div class="ttname"><a href="solver_8hpp.html#afe01386a82fedc016455a43c20280a97">EPS</a></div><div class="ttdeci">const double EPS</div><div class="ttdoc">Accurancy for comparison of two double values.</div><div class="ttdef"><b>Definition:</b> solver.hpp:15</div></div>
+<div class="ttc" id="asolver_8hpp_html_aff33def1f358ea2c4a586274fbe3042d"><div class="ttname"><a href="solver_8hpp.html#aff33def1f358ea2c4a586274fbe3042d">is_zero</a></div><div class="ttdeci">int is_zero(double a, double lim=EPS)</div><div class="ttdef"><b>Definition:</b> solver.cpp:62</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Документация по squaresolver. Последние изменения: Вс 28 Авг 2022 13:52:55. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

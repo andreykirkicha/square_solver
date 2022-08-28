@@ -3,6 +3,8 @@
 
 /*!
     This function provides user to interact with functions of the program.
+    \param[in] file_name - name of test file that user would use
+    \param[out] session_continue - variable that controls status of session
 */
 void request( const char *file_name, bool *session_continue );
 

@@ -1,4 +1,6 @@
 <map id="test.cpp" name="test.cpp">
-<area shape="rect" href="$test_8hpp.html" title=" " alt="" coords="175,82,244,108" />
-<area shape="rect" href="$squaresolver_8hpp.html" title=" " alt="" coords="268,82,391,108" />
+<area shape="rect" href="$test_8hpp.html" title=" " alt="" coords="268,81,337,108" />
+<area shape="rect" href="$error_8hpp.html" title=" " alt="" coords="337,156,412,183" />
+<area shape="rect" href="$solver_8hpp.html" title=" " alt="" coords="471,156,553,183" />
+<area shape="rect" href="$interface_8hpp.html" title=" " alt="" coords="412,81,511,108" />
 </map>

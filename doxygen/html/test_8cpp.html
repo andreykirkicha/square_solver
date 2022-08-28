@@ -46,34 +46,79 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="test_8hpp_source.html">test.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="squaresolver_8hpp_source.html">squaresolver.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="solver_8hpp_source.html">solver.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interface_8hpp_source.html">interface.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error_8hpp_source.html">error.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Граф включаемых заголовочных файлов для test.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_8cpp__incl.png" border="0" usemap="#atest_8cpp" alt=""/></div>
 <map name="atest_8cpp" id="atest_8cpp">
-<area shape="rect" href="test_8hpp.html" title=" " alt="" coords="175,82,244,108" />
-<area shape="rect" href="squaresolver_8hpp.html" title=" " alt="" coords="268,82,391,108" />
+<area shape="rect" href="test_8hpp.html" title=" " alt="" coords="268,81,337,108" />
+<area shape="rect" href="error_8hpp.html" title=" " alt="" coords="337,156,412,183" />
+<area shape="rect" href="solver_8hpp.html" title=" " alt="" coords="471,156,553,183" />
+<area shape="rect" href="interface_8hpp.html" title=" " alt="" coords="412,81,511,108" />
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a1dd80a1428e6a8704bf5ad81f5055357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a1dd80a1428e6a8704bf5ad81f5055357">test_calculate</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="squaresolver_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, int num, FILE *f)</td></tr>
-<tr class="separator:a1dd80a1428e6a8704bf5ad81f5055357"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f1182d69b41a2b8716433b4cd2f88bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb">test_read</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="squaresolver_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, FILE *f)</td></tr>
-<tr class="separator:a4f1182d69b41a2b8716433b4cd2f88bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d3e0d724ef10c3796a1ca8ec20dea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a68d3e0d724ef10c3796a1ca8ec20dea3">test_print</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="test_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, int num, FILE *f, int *test_count, int *correct_test_count)</td></tr>
+<tr class="separator:a68d3e0d724ef10c3796a1ca8ec20dea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2472b45ac1b4ecad554421514ec6d083"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a2472b45ac1b4ecad554421514ec6d083">test_read</a> (struct <a class="el" href="struct_test__data.html">Test_data</a> *<a class="el" href="test_8hpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a>, FILE *f)</td></tr>
+<tr class="separator:a2472b45ac1b4ecad554421514ec6d083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67cad071846f1142f8ef33043c4fc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4">test</a> (const char *file_name)</td></tr>
+<tr class="separator:a6e67cad071846f1142f8ef33043c4fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="a1dd80a1428e6a8704bf5ad81f5055357"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dd80a1428e6a8704bf5ad81f5055357">&#9670;&nbsp;</a></span>test_calculate()</h2>
+<a id="a6e67cad071846f1142f8ef33043c4fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e67cad071846f1142f8ef33043c4fc4">&#9670;&nbsp;</a></span>test()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> test_calculate </td>
+          <td class="memname">void test </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function is used to print results of all tests. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">test_file_name</td><td>- name of test file </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="test_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph.png" border="0" usemap="#atest_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" alt=""/></div>
+<map name="atest_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph" id="atest_8cpp_a6e67cad071846f1142f8ef33043c4fc4_cgraph">
+<area shape="rect" href="test_8cpp.html#a68d3e0d724ef10c3796a1ca8ec20dea3" title=" " alt="" coords="99,108,174,135" />
+<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="242,7,311,33" />
+<area shape="rect" href="interface_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="240,57,312,84" />
+<area shape="rect" href="solver_8cpp.html#a1eb24f891c892c102e3413c143e472be" title=" " alt="" coords="224,108,328,135" />
+<area shape="rect" href="test_8cpp.html#a2472b45ac1b4ecad554421514ec6d083" title=" " alt="" coords="238,159,315,185" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="524,108,588,135" />
+<area shape="rect" href="solver_8cpp.html#ab9fe58d0f7bcb2b5b193fb612c923487" title=" " alt="" coords="379,133,475,160" />
+</map>
+</div>
+
+</div>
+</div>
+<a id="a68d3e0d724ef10c3796a1ca8ec20dea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d3e0d724ef10c3796a1ca8ec20dea3">&#9670;&nbsp;</a></span>test_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a> test_print </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="struct_test__data.html">Test_data</a> *&#160;</td>
           <td class="paramname"><em>test</em>, </td>
@@ -88,7 +133,19 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>test_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>correct_test_count</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -97,42 +154,44 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This function solves quadratic equation using coefficients from test file if input is correct, otherwise returns error number. </p><dl class="params"><dt>Аргументы</dt><dd>
+<p>This function is used to print input data, result of solving and wanted data for one test. </p><dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">test</td><td>- structure that is used to contain test data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>- number of test </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- test file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>- number of a test </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>- test .txt file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">test_count</td><td>- all tests counter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">correct_test_count</td><td>- correct tests counter </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>OK (0) - input was correct </dd>
+<dl class="section return"><dt>Возвращает</dt><dd>NO_ERROR (0) - test was correct </dd>
 <dd>
-INCORRECT_INPUT (-1) - input was incorrect </dd></dl>
+INCORRECT_INPUT (-1) - test input was incorrect </dd></dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="test_8cpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph.png" border="0" usemap="#atest_8cpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph" alt=""/></div>
-<map name="atest_8cpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph" id="atest_8cpp_a1dd80a1428e6a8704bf5ad81f5055357_cgraph">
-<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="419,57,491,84" />
-<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="403,108,507,135" />
-<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="159,108,201,135" />
-<area shape="rect" href="test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="416,159,493,185" />
-<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="703,108,767,135" />
-<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="557,133,653,160" />
-<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="251,108,352,135" />
+<div class="center"><img src="test_8cpp_a68d3e0d724ef10c3796a1ca8ec20dea3_cgraph.png" border="0" usemap="#atest_8cpp_a68d3e0d724ef10c3796a1ca8ec20dea3_cgraph" alt=""/></div>
+<map name="atest_8cpp_a68d3e0d724ef10c3796a1ca8ec20dea3_cgraph" id="atest_8cpp_a68d3e0d724ef10c3796a1ca8ec20dea3_cgraph">
+<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="151,7,220,34" />
+<area shape="rect" href="interface_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="149,58,221,84" />
+<area shape="rect" href="solver_8cpp.html#a1eb24f891c892c102e3413c143e472be" title=" " alt="" coords="133,108,237,135" />
+<area shape="rect" href="test_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="315,171,357,198" />
+<area shape="rect" href="test_8cpp.html#a2472b45ac1b4ecad554421514ec6d083" title=" " alt="" coords="147,234,224,260" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="433,90,497,116" />
+<area shape="rect" href="solver_8cpp.html#ab9fe58d0f7bcb2b5b193fb612c923487" title=" " alt="" coords="288,115,384,142" />
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4f1182d69b41a2b8716433b4cd2f88bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f1182d69b41a2b8716433b4cd2f88bb">&#9670;&nbsp;</a></span>test_read()</h2>
+<a id="a2472b45ac1b4ecad554421514ec6d083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2472b45ac1b4ecad554421514ec6d083">&#9670;&nbsp;</a></span>test_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="squaresolver_8hpp.html#a622ccac4bed4b5ffcfd1acea83629286">ERRORS</a> test_read </td>
+          <td class="memname"><a class="el" href="error_8hpp.html#a8fb872c72e116bbd3eba31f48d78e76b">Errors</a> test_read </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="struct_test__data.html">Test_data</a> *&#160;</td>
           <td class="paramname"><em>test</em>, </td>
@@ -157,20 +216,21 @@ INCORRECT_INPUT (-1) - input was incorrect </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Возвращает</dt><dd>OK (0) - correct input data </dd>
+<dl class="section return"><dt>Возвращает</dt><dd>NO_ERROR (0) - correct input data </dd>
 <dd>
 INCORRECT_INPUT (-1) - incorrect input data </dd></dl>
 <div class="dynheader">
 Граф вызовов:</div>
 <div class="dyncontent">
-<div class="center"><img src="test_8cpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph.png" border="0" usemap="#atest_8cpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph" alt=""/></div>
-<map name="atest_8cpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph" id="atest_8cpp_a4f1182d69b41a2b8716433b4cd2f88bb_cgraph">
-<area shape="rect" href="question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="132,32,175,59" />
-<area shape="rect" href="read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="392,7,464,33" />
-<area shape="rect" href="squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="224,57,326,84" />
-<area shape="rect" href="solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="376,57,480,84" />
-<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="676,57,740,84" />
-<area shape="rect" href="solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="531,83,627,109" />
+<div class="center"><img src="test_8cpp_a2472b45ac1b4ecad554421514ec6d083_cgraph.png" border="0" usemap="#atest_8cpp_a2472b45ac1b4ecad554421514ec6d083_cgraph" alt=""/></div>
+<map name="atest_8cpp_a2472b45ac1b4ecad554421514ec6d083_cgraph" id="atest_8cpp_a2472b45ac1b4ecad554421514ec6d083_cgraph">
+<area shape="rect" href="test_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="132,58,175,84" />
+<area shape="rect" href="test_8cpp.html#a68d3e0d724ef10c3796a1ca8ec20dea3" title=" " alt="" coords="224,58,299,84" />
+<area shape="rect" href="solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="367,7,436,34" />
+<area shape="rect" href="interface_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="365,58,437,84" />
+<area shape="rect" href="solver_8cpp.html#a1eb24f891c892c102e3413c143e472be" title=" " alt="" coords="349,108,453,135" />
+<area shape="rect" href="solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="649,108,713,135" />
+<area shape="rect" href="solver_8cpp.html#ab9fe58d0f7bcb2b5b193fb612c923487" title=" " alt="" coords="504,134,600,160" />
 </map>
 </div>
 
@@ -179,7 +239,7 @@ INCORRECT_INPUT (-1) - incorrect input data </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Документация по squaresolver. Последние изменения: Сб 27 Авг 2022 11:52:08. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Документация по squaresolver. Последние изменения: Вс 28 Авг 2022 13:52:55. Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

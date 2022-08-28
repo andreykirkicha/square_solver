@@ -1,16 +1,17 @@
 <map id="main" name="main">
-<area shape="rect" href="$question_8cpp.html#af6443c5cdc58add0acbd366aa410139a" title=" " alt="" coords="107,260,205,287" />
-<area shape="rect" href="$question_8cpp.html#a02f6a66242172ced5e7694a59c5c7f63" title=" " alt="" coords="255,125,399,168" />
-<area shape="rect" href="$read__print_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="965,299,1037,325" />
-<area shape="rect" href="$question_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="305,260,348,287" />
-<area shape="rect" href="$read__print_8cpp.html#a8fabb6bc4005e0a964b5f00211f6b45a" title=" " alt="" coords="448,159,571,185" />
-<area shape="rect" href="$read__print_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="460,32,559,59" />
-<area shape="rect" href="$solver_8cpp.html#a677cad337c0dc50f5e67b3a3b9988dfe" title=" " alt="" coords="627,108,731,135" />
-<area shape="rect" href="$read__print_8cpp.html#a32e0ba446aec3661b7a7e6ca8e06c088" title=" " alt="" coords="621,159,736,185" />
-<area shape="rect" href="$error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="804,209,897,236" />
-<area shape="rect" href="$read__print_8cpp.html#afe983e3d4358ebbb20b10645caf9f2a3" title=" " alt="" coords="785,159,916,185" />
-<area shape="rect" href="$solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="969,57,1033,84" />
-<area shape="rect" href="$solver_8cpp.html#aefb4bc300b8ba34c80ead6b6fcfbfe14" title=" " alt="" coords="803,108,899,135" />
-<area shape="rect" href="$squaresolver_8hpp.html#a1dd80a1428e6a8704bf5ad81f5055357" title=" " alt="" coords="459,235,560,261" />
-<area shape="rect" href="$test_8cpp.html#a4f1182d69b41a2b8716433b4cd2f88bb" title=" " alt="" coords="640,285,717,312" />
+<area shape="rect" href="$question_8cpp.html#aa5ac3954c9c3045874ee64e7ba55a3ac" title=" " alt="" coords="107,220,171,247" />
+<area shape="rect" href="$interface_8cpp.html#a02f6a66242172ced5e7694a59c5c7f63" title=" " alt="" coords="220,172,364,215" />
+<area shape="rect" href="$test_8cpp.html#a6e67cad071846f1142f8ef33043c4fc4" title=" " alt="" coords="271,260,314,287" />
+<area shape="rect" href="$interface_8cpp.html#afd20c160a8b7e223d357912a1b78bb11" title=" " alt="" coords="414,83,536,109" />
+<area shape="rect" href="$interface_8cpp.html#a38dbfacccb0dd11c32685c7573127a9f" title=" " alt="" coords="426,159,524,185" />
+<area shape="rect" href="$solver_8cpp.html#a1eb24f891c892c102e3413c143e472be" title=" " alt="" coords="592,209,696,236" />
+<area shape="rect" href="$interface_8cpp.html#a37a4135e5087e4064f6c41a9d4bcc31c" title=" " alt="" coords="587,57,702,84" />
+<area shape="rect" href="$error_8cpp.html#a12e2b8237677e38e9dfeb4f6e86154f5" title=" " alt="" coords="770,7,863,33" />
+<area shape="rect" href="$interface_8cpp.html#a38cbd1e1a77607ca671449e1e93bbbf2" title=" " alt="" coords="751,57,882,84" />
+<area shape="rect" href="$interface_8cpp.html#a414daf603ed0764e620c131477f3716e" title=" " alt="" coords="931,57,1003,84" />
+<area shape="rect" href="$solver_8cpp.html#a5f362d0ded3cfb385be07e61a70d41cf" title=" " alt="" coords="935,209,999,236" />
+<area shape="rect" href="$solver_8cpp.html#ab9fe58d0f7bcb2b5b193fb612c923487" title=" " alt="" coords="768,260,864,287" />
+<area shape="rect" href="$test_8cpp.html#a68d3e0d724ef10c3796a1ca8ec20dea3" title=" " alt="" coords="438,260,512,287" />
+<area shape="rect" href="$solver_8cpp.html#a59407076ee6342ec18d2de0c0b5ebda9" title=" " alt="" coords="610,260,679,287" />
+<area shape="rect" href="$test_8cpp.html#a2472b45ac1b4ecad554421514ec6d083" title=" " alt="" coords="606,311,683,337" />
 </map>
