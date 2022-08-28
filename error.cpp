@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include "squaresolver.hpp"
+
+#include "solver.hpp"
+#include "interface.hpp"
+#include "error.hpp"
 
 void error_printer( int error )
 {
-    if (error == OK)
+    if (error == NO_ERROR)
         return;
 
     printf("error: ");

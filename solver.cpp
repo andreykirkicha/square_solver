@@ -1,9 +1,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <assert.h>
-#include "squaresolver.hpp"
 
-ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
+#include "solver.hpp"
+
+Roots square_solver( double a, double b, double c, double *x1, double *x2 )
 {
     assert(x1 != NULL);
     assert(x2 != NULL);
@@ -24,7 +25,14 @@ ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
 
     double discriminant = b * b - 4 * a * c;
 
-    if (discriminant > EPS)
+    if (is_zero(discriminant))
+    {
+        *x1 = -b / (2 * a);
+
+        return ONE_ROOT;
+    }
+
+    if (discriminant > 0)
     {
         double sqrt_discriminant = sqrt(discriminant);
 
@@ -34,17 +42,10 @@ ROOTS square_solver( double a, double b, double c, double *x1, double *x2 )
         return TWO_ROOTS;
     }
 
-    if (is_zero(discriminant))
-    {
-        *x1 = -b / (2 * a);
-
-        return ONE_ROOT;
-    }
-
     return NO_ROOTS;
 }
 
-ROOTS linear_solver( double b, double c, double *x1 )
+Roots linear_solver( double b, double c, double *x1 )
 {
     assert(x1 != NULL);
     assert(finite(b));
@@ -61,6 +62,16 @@ ROOTS linear_solver( double b, double c, double *x1 )
 int is_zero( double a, double lim )
 {
     assert(finite(a));
+    assert(finite(lim));
 
     return (fabs(a) < lim);
+}
+
+int is_equal( double a, double b, double lim )
+{
+    assert(finite(a));
+    assert(finite(b));
+    assert(finite(lim));
+
+    return (fabs(a - b) < lim);
 }

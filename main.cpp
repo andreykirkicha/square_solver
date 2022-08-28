@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "squaresolver.hpp"
-#include "test.hpp"
+
+#include "question.hpp"
 
 int main(int argc, char *argv[])
 {

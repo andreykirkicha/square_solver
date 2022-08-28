@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include "test.hpp"
-#include "squaresolver.hpp"
 
-ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
+#include "test.hpp"
+#include "solver.hpp"
+#include "interface.hpp"
+#include "error.hpp"
+
+Errors test_print( struct Test_data *test, int num, FILE *f, int *test_count, int *correct_test_count )
 {
     assert(test != NULL);
     assert(finite(num));
@@ -13,7 +16,7 @@ ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
     double x1 = 0;
     double x2 = 0;
 
-    ERRORS error = test_read(test, f);
+    Errors error = test_read(test, f);
 
     printf("%d)", num + 1);
 
@@ -22,10 +25,8 @@ ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
         skip_line(f);
         int res = error;
 
-        printf("\tinput:\n"
-               "\tincorrect input\n\n"
-               "\toutput:\n"
-               "\tres:\t%d\n\n",
+        printf("\tinput:\n\tincorrect input\n\n"
+               "\toutput:\n\tres:\t%d\n\n",
                res);
     }
 
@@ -33,61 +34,59 @@ ERRORS test_calculate( struct Test_data *test, int num, FILE *f )
     {
         int res = square_solver(test->a, test->b, test->c, &x1, &x2);
 
+        printf("\tinput:\n\ta:\t%lf\n\tb:\t%lf\n\tc:\t%lf\n\n",
+            test->a, test->b, test->c);
+
         switch(res)
         {
             case INF_ROOTS:
             case NO_ROOTS:
-               printf("\tinput:\n"
-                      "\ta:\t%lf\n"
-                      "\tb:\t%lf\n"
-                      "\tc:\t%lf\n\n"
-                      "\toutput:\n"
-                      "\tres:\t%d\n\n"
-                      "\twanted:\n"
-                      "\tans:\t%s\n\n",
-                      test->a, test->b, test->c,
-                      res,
-                      test->res);
-               break;
+                printf("\toutput:\n\tres:\t%d\n\n"
+                    "\twanted:\n\tans:\t%s\n\n",
+                    res,
+                    test->res);
+                break;
+
             case ONE_ROOT:
-               printf("\tinput:\n"
-                      "\ta:\t%lf\n"
-                      "\tb:\t%lf\n"
-                      "\tc:\t%lf\n\n"
-                      "\toutput:\n"
-                      "\tres:\t%d\n"
-                      "\tx1:\t%lf\n\n"
-                      "\twanted:\n"
-                      "\tans:\t%s\n"
-                      "\tx1:\t%lf\n\n",
-                      test->a, test->b, test->c,
-                      res, x1,
-                      test->res, test->x1);
-               break;
+                printf("\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\n"
+                    "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\n",
+                    res, x1,
+                    test->res, test->x1);
+
+                if (is_equal(x1, test->x1))
+                {
+                    printf("\tNO_ERROR\n\n");
+                    (*correct_test_count)++;
+                }
+
+                else
+                    printf("\tFAILED\n\n");
+                (*test_count)++;
+                break;
+
             case TWO_ROOTS:
-               printf("\tinput:\n"
-                      "\ta:\t%lf\n"
-                      "\tb:\t%lf\n"
-                      "\tc:\t%lf\n\n"
-                      "\toutput:\n"
-                      "\tres:\t%d\n"
-                      "\tx1:\t%lf\n"
-                      "\tx2:\t%lf\n\n"
-                      "\twanted:\n"
-                      "\tans:\t%s\n"
-                      "\tx1:\t%lf\n"
-                      "\tx2:\t%lf\n\n",
-                      test->a, test->b, test->c,
-                      res, x1, x2,
-                      test->res, test->x1, test->x2);
-              break;
+                printf("\toutput:\n\tres:\t%d\n\tx1:\t%lf\n\tx2:\t%lf\n\n"
+                    "\twanted:\n\tans:\t%s\n\tx1:\t%lf\n\tx2:\t%lf\n\n",
+                    res, x1, x2,
+                    test->res, test->x1, test->x2);
+
+                if (is_equal(x1, test->x1) && is_equal(x2, test->x2))
+                {
+                    printf("\tNO_ERROR\n\n");
+                    (*correct_test_count)++;
+                }
+
+                else
+                    printf("\tFAILED\n\n");
+                (*test_count)++;
+                break;
         }
     }
 
     return error;
 }
 
-ERRORS test_read( struct Test_data *test, FILE *f )
+Errors test_read( struct Test_data *test, FILE *f )
 {
     assert(test != NULL);
     assert(f != NULL);
@@ -102,5 +101,35 @@ ERRORS test_read( struct Test_data *test, FILE *f )
     if (tail != '\n')
         return INCORRECT_INPUT;
 
-    return OK;
+    return NO_ERROR;
+}
+
+void test( const char *file_name )
+{
+    assert(file_name != NULL);
+
+    struct Test_data data[AMOUNT] = {};
+    FILE *test_file = fopen(file_name, "r");
+
+    if (test_file == NULL)
+    {
+        perror("error");
+        printf("\n");
+
+        return;
+    }
+
+    printf("\n<test_begin>\n\n");
+
+    int test_count = 0;
+    int correct_test_count = 0;
+
+    for (int i = 0; i < AMOUNT; i++)
+        test_print(&data[i], i, test_file, &test_count, &correct_test_count);
+
+    printf("RESULT\tcorrect tests:\t%d\n"
+           "\ttotal:\t\t%d\n\n",
+           test_count, correct_test_count);
+
+    printf("<test_end>\n\n");
 }
